@@ -1,0 +1,17 @@
+# Description: Test component documentation
+name: TestComponent
+description: Test Component
+schemaVersion: 1.0.0
+parameters:
+  MyInputParameter:
+    type: string
+    default: It's me!
+    description: Test Parameter
+    phases:
+      name: build
+      steps:
+        - name: hello
+          action: ExecuteBash
+          inputs:
+            commands:
+              - echo "Hello World {{ MyInputParameter }}"

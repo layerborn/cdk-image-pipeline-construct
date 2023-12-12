@@ -1,0 +1,975 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "ImageBuilderTestStackSimple": {
+        "id": "ImageBuilderTestStackSimple",
+        "path": "ImageBuilderTestStackSimple",
+        "children": {
+          "Vpc": {
+            "id": "Vpc",
+            "path": "ImageBuilderTestStackSimple/Vpc",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "ImageBuilderTestStackSimple/Vpc/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "12.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "ImageBuilderTestStackSimple/Vpc"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.CfnVPC",
+                  "version": "2.114.1"
+                }
+              },
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "availabilityZone": "us-east-2a",
+                        "cidrBlock": "12.0.0.0/24",
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VpcPublicSubnet1RouteTable6C95E38E"
+                        },
+                        "subnetId": {
+                          "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "VpcIGWD7BA715C"
+                        },
+                        "routeTableId": {
+                          "Ref": "VpcPublicSubnet1RouteTable6C95E38E"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "EIP": {
+                    "id": "EIP",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/EIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc",
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnEIP",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "NATGateway": {
+                    "id": "NATGateway",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/NATGateway",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "allocationId": {
+                          "Fn::GetAtt": [
+                            "VpcPublicSubnet1EIPD7E02669",
+                            "AllocationId"
+                          ]
+                        },
+                        "subnetId": {
+                          "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
+                        },
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnNatGateway",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.PublicSubnet",
+                  "version": "2.114.1"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "availabilityZone": "us-east-2b",
+                        "cidrBlock": "12.0.1.0/24",
+                        "mapPublicIpOnLaunch": true,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VpcPublicSubnet2RouteTable94F7E489"
+                        },
+                        "subnetId": {
+                          "Ref": "VpcPublicSubnet2Subnet691E08A3"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "VpcIGWD7BA715C"
+                        },
+                        "routeTableId": {
+                          "Ref": "VpcPublicSubnet2RouteTable94F7E489"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.PublicSubnet",
+                  "version": "2.114.1"
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "availabilityZone": "us-east-2a",
+                        "cidrBlock": "12.0.2.0/24",
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500"
+                        },
+                        "subnetId": {
+                          "Ref": "VpcPrivateSubnet1Subnet536B997A"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "VpcPublicSubnet1NATGateway4D7517AA"
+                        },
+                        "routeTableId": {
+                          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.PrivateSubnet",
+                  "version": "2.114.1"
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2",
+                "children": {
+                  "Subnet": {
+                    "id": "Subnet",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/Subnet",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                      "aws:cdk:cloudformation:props": {
+                        "availabilityZone": "us-east-2b",
+                        "cidrBlock": "12.0.3.0/24",
+                        "mapPublicIpOnLaunch": false,
+                        "tags": [
+                          {
+                            "key": "aws-cdk:subnet-name",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "aws-cdk:subnet-type",
+                            "value": "Private"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "Acl": {
+                    "id": "Acl",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTable": {
+                    "id": "RouteTable",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/RouteTable",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "tags": [
+                          {
+                            "key": "Name",
+                            "value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "RouteTableAssociation": {
+                    "id": "RouteTableAssociation",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/RouteTableAssociation",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VpcPrivateSubnet2RouteTableA678073B"
+                        },
+                        "subnetId": {
+                          "Ref": "VpcPrivateSubnet2Subnet3788AAA1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "DefaultRoute": {
+                    "id": "DefaultRoute",
+                    "path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/DefaultRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "VpcPublicSubnet1NATGateway4D7517AA"
+                        },
+                        "routeTableId": {
+                          "Ref": "VpcPrivateSubnet2RouteTableA678073B"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.PrivateSubnet",
+                  "version": "2.114.1"
+                }
+              },
+              "IGW": {
+                "id": "IGW",
+                "path": "ImageBuilderTestStackSimple/Vpc/IGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Name",
+                        "value": "ImageBuilderTestStackSimple/Vpc"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.CfnInternetGateway",
+                  "version": "2.114.1"
+                }
+              },
+              "VPCGW": {
+                "id": "VPCGW",
+                "path": "ImageBuilderTestStackSimple/Vpc/VPCGW",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "internetGatewayId": {
+                      "Ref": "VpcIGWD7BA715C"
+                    },
+                    "vpcId": {
+                      "Ref": "Vpc8378EB38"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.CfnVPCGatewayAttachment",
+                  "version": "2.114.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_ec2.Vpc",
+              "version": "2.114.1"
+            }
+          },
+          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "path": "ImageBuilderTestStackSimple/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.114.1"
+            }
+          },
+          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118": {
+            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "path": "ImageBuilderTestStackSimple/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.114.1"
+            }
+          },
+          "ImagePipeline": {
+            "id": "ImagePipeline",
+            "path": "ImageBuilderTestStackSimple/ImagePipeline",
+            "children": {
+              "ImageBuilderTopic": {
+                "id": "ImageBuilderTopic",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/ImageBuilderTopic",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ImageBuilderTestStackSimple/ImagePipeline/ImageBuilderTopic/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                      "aws:cdk:cloudformation:props": {
+                        "displayName": "Image Builder Notify"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_sns.CfnTopic",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_sns.Topic",
+                  "version": "2.114.1"
+                }
+              },
+              "Role": {
+                "id": "Role",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/Role",
+                "children": {
+                  "ImportRole": {
+                    "id": "ImportRole",
+                    "path": "ImageBuilderTestStackSimple/ImagePipeline/Role/ImportRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.114.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ImageBuilderTestStackSimple/ImagePipeline/Role/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "ec2.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "description": "IAM role used as part of an Image Builder pipeline",
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/EC2InstanceProfileForImageBuilder"
+                              ]
+                            ]
+                          },
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/EC2InstanceProfileForImageBuilderECRContainerBuilds"
+                              ]
+                            ]
+                          },
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/AmazonSSMManagedInstanceCore"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Role",
+                  "version": "2.114.1"
+                }
+              },
+              "KmsKey": {
+                "id": "KmsKey",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/KmsKey",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ImageBuilderTestStackSimple/ImagePipeline/KmsKey/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::KMS::Key",
+                      "aws:cdk:cloudformation:props": {
+                        "description": "KMS Key used to encrypt the SNS topic",
+                        "enableKeyRotation": true,
+                        "keyPolicy": {
+                          "Statement": [
+                            {
+                              "Action": "kms:*",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":iam::265654035060:root"
+                                    ]
+                                  ]
+                                }
+                              },
+                              "Resource": "*"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_kms.CfnKey",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_kms.Key",
+                  "version": "2.114.1"
+                }
+              },
+              "InstanceProfile": {
+                "id": "InstanceProfile",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/InstanceProfile",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::InstanceProfile",
+                  "aws:cdk:cloudformation:props": {
+                    "instanceProfileName": "ImagePipeline-InstanceProfile",
+                    "roles": [
+                      {
+                        "Ref": "ImagePipelineRole10746E1A"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnInstanceProfile",
+                  "version": "2.114.1"
+                }
+              },
+              "SecurityGroup": {
+                "id": "SecurityGroup",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/SecurityGroup",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ImageBuilderTestStackSimple/ImagePipeline/SecurityGroup/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SecurityGroup",
+                      "aws:cdk:cloudformation:props": {
+                        "groupDescription": "ImageBuilderTestStackSimple/ImagePipeline/SecurityGroup",
+                        "groupName": "ImageBuilderSecurityGroup",
+                        "securityGroupEgress": [
+                          {
+                            "cidrIp": "0.0.0.0/0",
+                            "description": "Allow all outbound traffic by default",
+                            "ipProtocol": "-1"
+                          }
+                        ],
+                        "vpcId": {
+                          "Ref": "Vpc8378EB38"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_ec2.CfnSecurityGroup",
+                      "version": "2.114.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ec2.SecurityGroup",
+                  "version": "2.114.1"
+                }
+              },
+              "InfrastructureConfiguration": {
+                "id": "InfrastructureConfiguration",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/InfrastructureConfiguration",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ImageBuilder::InfrastructureConfiguration",
+                  "aws:cdk:cloudformation:props": {
+                    "description": "Example Infrastructure Configuration for Image Builder",
+                    "instanceProfileName": "ImagePipeline-InstanceProfile",
+                    "instanceTypes": [
+                      "t3.medium",
+                      "m5.large",
+                      "m5.xlarge"
+                    ],
+                    "name": "ImagePipeline-InfrastructureConfiguration",
+                    "securityGroupIds": [
+                      {
+                        "Fn::GetAtt": [
+                          "ImagePipelineSecurityGroupC109FEA2",
+                          "GroupId"
+                        ]
+                      }
+                    ],
+                    "snsTopicArn": {
+                      "Ref": "ImagePipelineImageBuilderTopic5AF43CD3"
+                    },
+                    "subnetId": {
+                      "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_imagebuilder.CfnInfrastructureConfiguration",
+                  "version": "2.114.1"
+                }
+              },
+              "ImageRecipe": {
+                "id": "ImageRecipe",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/ImageRecipe",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ImageBuilder::ImageRecipe",
+                  "aws:cdk:cloudformation:props": {
+                    "components": [
+                      {
+                        "componentArn": {
+                          "Fn::GetAtt": [
+                            "ImagePipelineTestComponentEDC11BE8",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    ],
+                    "name": "ImagePipeline-ImageRecipe",
+                    "parentImage": {
+                      "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+                    },
+                    "version": "0.0.1"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_imagebuilder.CfnImageRecipe",
+                  "version": "2.114.1"
+                }
+              },
+              "TestComponent": {
+                "id": "TestComponent",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/TestComponent",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ImageBuilder::Component",
+                  "aws:cdk:cloudformation:props": {
+                    "data": "name: TestComponent\ndescription: Test Component\nschemaVersion: '1.0'\nphases:\n  - name: build\n    steps:\n      - name: hello\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World\"\n",
+                    "description": "Test Component",
+                    "name": "TestComponent",
+                    "platform": "Linux",
+                    "version": "1.0.0"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_imagebuilder.CfnComponent",
+                  "version": "2.114.1"
+                }
+              },
+              "ImagePipeline": {
+                "id": "ImagePipeline",
+                "path": "ImageBuilderTestStackSimple/ImagePipeline/ImagePipeline",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ImageBuilder::ImagePipeline",
+                  "aws:cdk:cloudformation:props": {
+                    "description": "Image pipeline",
+                    "imageRecipeArn": {
+                      "Fn::GetAtt": [
+                        "ImagePipelineImageRecipeA26BB9F6",
+                        "Arn"
+                      ]
+                    },
+                    "infrastructureConfigurationArn": {
+                      "Fn::GetAtt": [
+                        "ImagePipelineInfrastructureConfigurationF13D357B",
+                        "Arn"
+                      ]
+                    },
+                    "name": "ImagePipeline-ImagePipeline"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_imagebuilder.CfnImagePipeline",
+                  "version": "2.114.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.0.5"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "ImageBuilderTestStackSimple/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "ImageBuilderTestStackSimple/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.114.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.0.5"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "ImageBuilderTestStackSimple/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.114.1"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "ImageBuilderTestStackSimple/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.114.1"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.114.1"
+        }
+      },
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.0.5"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.114.1"
+    }
+  }
+}

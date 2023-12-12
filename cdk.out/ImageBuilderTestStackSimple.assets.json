@@ -1,0 +1,20 @@
+{
+  "version": "35.0.0",
+  "files": {
+    "f27701db75c19bc4a8b9a33a014de267ea5a6dd412bc40b76b57663e877508dc": {
+      "source": {
+        "path": "ImageBuilderTestStackSimple.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "265654035060-us-east-2": {
+          "bucketName": "cdk-tests-assets-265654035060-us-east-2",
+          "objectKey": "f27701db75c19bc4a8b9a33a014de267ea5a6dd412bc40b76b57663e877508dc.json",
+          "region": "us-east-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::265654035060:role/cdk-tests-file-publishing-role-265654035060-us-east-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

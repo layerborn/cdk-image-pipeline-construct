@@ -1,5 +1,5 @@
 {
-  "name": "cdk-ami-builder-construct",
+  "name": "cdk-ami-builder",
   "repository": {
     "type": "git",
     "url": "https://github.com/layerborn/cdk-ami-builder-construct.git"
@@ -7,6 +7,9 @@
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
+    "bundle": "npx projen bundle",
+    "bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda": "npx projen bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda",
+    "bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda:watch": "npx projen bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda:watch",
     "clobber": "npx projen clobber",
     "compat": "npx projen compat",
     "compile": "npx projen compile",
@@ -38,8 +41,10 @@
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk": "^2.114.1",
+    "aws-cdk-lib": "2.41.0",
     "constructs": "10.0.5",
+    "esbuild": "^0.19.8",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.0",
@@ -50,7 +55,6 @@
     "jsii-docgen": "^10.2.5",
     "jsii-pacmak": "^1.93.0",
     "jsii-rosetta": "~5.0.0",
-    "npm-check-updates": "^16",
     "projen": "^0.77.5",
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
@@ -58,8 +62,33 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.41.0",
     "constructs": "^10.0.5"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-lambda-python-alpha": "2.41.0-alpha.0",
+    "@aws-sdk/client-ec2": "^3.470.0",
+    "@aws-sdk/client-ecs": "^3.470.0",
+    "@aws-sdk/client-sns": "^3.470.0",
+    "@aws-sdk/client-sqs": "^3.470.0",
+    "@layerborn/cdk-aspect-git-tagger": "^0.0.2",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^18",
+    "aws-cdk-lib": "^2.41.0",
+    "cdk-iam-floyd": "^0.507.0",
+    "js-yaml": "^4.1.0"
+  },
+  "bundledDependencies": [
+    "@aws-sdk/client-ec2",
+    "@aws-sdk/client-ecs",
+    "@aws-sdk/client-sns",
+    "@aws-sdk/client-sqs",
+    "@types/js-yaml",
+    "@types/node",
+    "js-yaml"
+  ],
+  "resolutions": {
+    "jest-environment-jsdom": "27.3.1"
   },
   "keywords": [
     "cdk"

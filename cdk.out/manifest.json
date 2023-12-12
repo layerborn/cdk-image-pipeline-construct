@@ -1,0 +1,251 @@
+{
+  "version": "35.0.0",
+  "artifacts": {
+    "ImageBuilderTestStackSimple.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ImageBuilderTestStackSimple.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/tests/version"
+      }
+    },
+    "ImageBuilderTestStackSimple": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://265654035060/us-east-2",
+      "properties": {
+        "templateFile": "ImageBuilderTestStackSimple.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::265654035060:role/cdk-tests-deploy-role-265654035060-us-east-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::265654035060:role/cdk-tests-cfn-exec-role-265654035060-us-east-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-tests-assets-265654035060-us-east-2/f27701db75c19bc4a8b9a33a014de267ea5a6dd412bc40b76b57663e877508dc.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/tests/version",
+        "additionalDependencies": [
+          "ImageBuilderTestStackSimple.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::265654035060:role/cdk-tests-lookup-role-265654035060-us-east-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/tests/version"
+        }
+      },
+      "dependencies": [
+        "ImageBuilderTestStackSimple.assets"
+      ],
+      "metadata": {
+        "/ImageBuilderTestStackSimple/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1Subnet5C2D37C4"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTable6C95E38E"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTableAssociation97140677"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1DefaultRoute3DA9E72A"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1EIPD7E02669"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1NATGateway4D7517AA"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2Subnet691E08A3"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2RouteTable94F7E489"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2RouteTableAssociationDD5762D8"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet2DefaultRoute97F91067"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1Subnet536B997A"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableB2C5B500"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableAssociation70C59FA6"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1DefaultRouteBE02A9ED"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2Subnet3788AAA1"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2RouteTableA678073B"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2RouteTableAssociationA89CAD56"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet2DefaultRoute060D2087"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIGWD7BA715C"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcVPCGWBF912B6E"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/ImageBuilderTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineImageBuilderTopic5AF43CD3"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineRole10746E1A"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/KmsKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineKmsKeyBE0C41F8"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineInstanceProfile98436885"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineSecurityGroupC109FEA2"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/InfrastructureConfiguration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineInfrastructureConfigurationF13D357B"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/ImageRecipe": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineImageRecipeA26BB9F6"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/TestComponent": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineTestComponentEDC11BE8"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/ImagePipeline/ImagePipeline": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ImagePipelineC71500CE"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ImageBuilderTestStackSimple/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ImageBuilderTestStackSimple"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
