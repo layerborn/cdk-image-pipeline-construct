@@ -34,10 +34,9 @@ export class CustomResourceLambdaStack extends Stack {
       natGateways: 1,
     });
 
-    const customLambdaResource = new TestCustomResourceFunction(this, 'CustomResourceLambdaStack',
+    const customLambdaResource = new TestCustomResourceFunction(this, 'CustomResourceLambdaFunction',
       {
-        functionName: 'CustomResourceLambdaStack',
-        description: 'CustomResourceLambdaStack',
+        description: 'CustomResourceLambdaFunctions',
         memorySize: 128,
         timeout: Duration.seconds(60),
         vpc: vpc,
@@ -55,15 +54,15 @@ export class CustomResourceLambdaStack extends Stack {
       onEventHandler: customLambdaResource,
     });
 
-    const customResourceMessage = new CustomResource(this, 'CustomResource', {
+    const result = new CustomResource(this, 'CustomResourceResult', {
       serviceToken: provider.serviceToken,
       properties: {
-        ParamSendToLambda: 'Test Custom Input Param from custom resource lambda stack',
+        customResourceNumber: 5,
       },
     });
 
-    new CfnOutput(this, 'CustomResourceOutput', {
-      value: customResourceMessage.getAttString('TestMessage'),
+    new CfnOutput(this, 'CustomResourceResultOutput', {
+      value: result.getAttString('Result'),
     });
 
     new CfnOutput(this, 'CustomResourceLambdaStackOutput', {

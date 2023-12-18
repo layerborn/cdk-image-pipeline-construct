@@ -21,8 +21,17 @@ const customResourceLambdaStack = new CustomResourceLambdaStack(app, 'CustomReso
 });
 
 
+const customResource2LambdaStack = new CustomResourceLambdaStack(app, 'CustomResourceLambda2Stack', {
+  vpcCidr: '14.0.0.0/16',
+  env: {
+    account: process.env.AWS_ACCOUNT,
+    region: process.env.AWS_REGION,
+  },
+});
+
+
 app.synth();
 
-if (imagebuilderTestStack || customResourceLambdaStack) {
+if (imagebuilderTestStack || customResourceLambdaStack || customResource2LambdaStack) {
   console.log('Stack Synthesized Successfully');
 }
