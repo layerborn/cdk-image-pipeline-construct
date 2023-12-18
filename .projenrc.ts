@@ -3,23 +3,24 @@ import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Jayson Rawlins',
   authorAddress: 'jayson.rawlins@layerborn.io',
+  packageName: '@layerborn/cdk-image-pipeline',
   cdkVersion: '2.41.0',
   defaultReleaseBranch: 'main',
+  license: 'Apache-2.0',
   jsiiVersion: '~5.0.0',
-  name: 'cdk-ami-builder',
+  name: 'cdk-image-pipeline',
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/layerborn/cdk-ami-builder-construct.git',
+  repositoryUrl: 'https://github.com/layerborn/cdk-image-pipeline-construct.git',
   deps: [
     'cdk-iam-floyd',
     '@layerborn/cdk-aspect-git-tagger',
     '@aws-cdk/aws-lambda-python-alpha@2.41.0-alpha.0',
     'aws-cdk-lib@^2.41.0',
-
-
   ],
   devDeps: [
     'aws-cdk',
     'aws-cdk-lib',
+    '@types/aws-lambda',
   ],
 
   bundledDeps: [

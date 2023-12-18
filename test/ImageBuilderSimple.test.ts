@@ -36,7 +36,7 @@ test('ImageBuildingSimpleTest', () => {
 
   new ImagePipeline(testStack, 'ImagePipelineTest', {
     parentImage: image.getImage(testStack).imageId,
-    subnetId: vpc.publicSubnets[0].subnetId,
+    vpc: vpc,
     components: [
       {
         name: 'TestComponent',

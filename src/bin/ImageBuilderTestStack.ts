@@ -38,9 +38,13 @@ export class ImageBuilderTestStack extends Stack {
       edition: AmazonLinuxEdition.STANDARD,
     });
 
+
+    /// take a version from SSM and increment it during deployment
+
     new ImagePipeline(this, 'ImagePipeline', {
       parentImage: image.getImage(this).imageId,
       vpc: vpc,
+      imageRecipeVersion: process.env.versionNumber,
       components: [
         {
           name: 'TestComponent',
@@ -70,4 +74,6 @@ export class ImageBuilderTestStack extends Stack {
       ],
     });
   }
+
+  /// return an AMI ID that can be used to launch an instance of this image
 }

@@ -52,3 +52,4 @@ tsconfig.json
 !/API.md
 /assets/
 !/src/Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda-function.ts
+!/src/Resources/Lambdas/TestCustomResourceLambda/TestCustomResource-function.ts

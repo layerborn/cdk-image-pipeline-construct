@@ -1,8 +1,8 @@
 {
-  "name": "cdk-ami-builder",
+  "name": "@layerborn/cdk-image-pipeline",
   "repository": {
     "type": "git",
-    "url": "https://github.com/layerborn/cdk-ami-builder-construct.git"
+    "url": "https://github.com/layerborn/cdk-image-pipeline-construct.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -10,6 +10,8 @@
     "bundle": "npx projen bundle",
     "bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda": "npx projen bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda",
     "bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda:watch": "npx projen bundle:Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda:watch",
+    "bundle:Resources/Lambdas/TestCustomResourceLambda/TestCustomResource.lambda": "npx projen bundle:Resources/Lambdas/TestCustomResourceLambda/TestCustomResource.lambda",
+    "bundle:Resources/Lambdas/TestCustomResourceLambda/TestCustomResource.lambda:watch": "npx projen bundle:Resources/Lambdas/TestCustomResourceLambda/TestCustomResource.lambda:watch",
     "clobber": "npx projen clobber",
     "compat": "npx projen compat",
     "compile": "npx projen compile",
@@ -37,6 +39,7 @@
     "organization": false
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.130",
     "@types/jest": "^29.5.11",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
@@ -87,9 +90,6 @@
     "@types/node",
     "js-yaml"
   ],
-  "resolutions": {
-    "jest-environment-jsdom": "27.3.1"
-  },
   "keywords": [
     "cdk"
   ],

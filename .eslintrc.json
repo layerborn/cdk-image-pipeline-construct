@@ -149,6 +149,7 @@
           "**/test/**",
           "**/build-tools/**",
           "src/Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda.lambda.ts",
+          "src/Resources/Lambdas/TestCustomResourceLambda/TestCustomResource.lambda.ts",
           ".projenrc.ts",
           "projenrc/**/*.ts"
         ],

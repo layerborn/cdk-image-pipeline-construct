@@ -54,9 +54,7 @@ export interface IInputParameter {
   description: string;
 }
 
-export interface IParameters {
-  [key: string]: IInputParameter;
-}
+export type IParameters = Record<string, IInputParameter>;
 
 /**
  * Component data

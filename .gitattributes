@@ -19,5 +19,6 @@
 /LICENSE linguist-generated
 /package.json linguist-generated
 /src/Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda-function.ts linguist-generated
+/src/Resources/Lambdas/TestCustomResourceLambda/TestCustomResource-function.ts linguist-generated
 /tsconfig.dev.json linguist-generated
 /yarn.lock linguist-generated

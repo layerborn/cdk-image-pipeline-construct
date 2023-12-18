@@ -2,39 +2,39 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### ImagePipeline <a name="ImagePipeline" id="cdk-ami-builder.ImagePipeline"></a>
+### ImagePipeline <a name="ImagePipeline" id="@layerborn/cdk-image-pipeline.ImagePipeline"></a>
 
-#### Initializers <a name="Initializers" id="cdk-ami-builder.ImagePipeline.Initializer"></a>
+#### Initializers <a name="Initializers" id="@layerborn/cdk-image-pipeline.ImagePipeline.Initializer"></a>
 
 ```typescript
-import { ImagePipeline } from 'cdk-ami-builder'
+import { ImagePipeline } from '@layerborn/cdk-image-pipeline'
 
 new ImagePipeline(scope: Construct, id: string, props: ImagePipelineProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-ami-builder.ImagePipeline.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-ami-builder.ImagePipeline.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-ami-builder.ImagePipeline.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-ami-builder.ImagePipelineProps">ImagePipelineProps</a></code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.Initializer.parameter.props">props</a></code> | <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps">ImagePipelineProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-ami-builder.ImagePipeline.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@layerborn/cdk-image-pipeline.ImagePipeline.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-ami-builder.ImagePipeline.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@layerborn/cdk-image-pipeline.ImagePipeline.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-ami-builder.ImagePipeline.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="@layerborn/cdk-image-pipeline.ImagePipeline.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-ami-builder.ImagePipelineProps">ImagePipelineProps</a>
+- *Type:* <a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps">ImagePipelineProps</a>
 
 ---
 
@@ -42,11 +42,11 @@ new ImagePipeline(scope: Construct, id: string, props: ImagePipelineProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-ami-builder.ImagePipeline.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-ami-builder.ImagePipeline.toString"></a>
+##### `toString` <a name="toString" id="@layerborn/cdk-image-pipeline.ImagePipeline.toString"></a>
 
 ```typescript
 public toString(): string
@@ -58,21 +58,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-ami-builder.ImagePipeline.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-ami-builder.ImagePipeline.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@layerborn/cdk-image-pipeline.ImagePipeline.isConstruct"></a>
 
 ```typescript
-import { ImagePipeline } from 'cdk-ami-builder'
+import { ImagePipeline } from '@layerborn/cdk-image-pipeline'
 
 ImagePipeline.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-ami-builder.ImagePipeline.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@layerborn/cdk-image-pipeline.ImagePipeline.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -84,12 +84,12 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-ami-builder.ImagePipeline.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-ami-builder.ImagePipeline.property.imageRecipeComponents">imageRecipeComponents</a></code> | <code>aws-cdk-lib.aws_imagebuilder.CfnImageRecipe.ComponentConfigurationProperty[]</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.property.imageRecipeComponents">imageRecipeComponents</a></code> | <code>aws-cdk-lib.aws_imagebuilder.CfnImageRecipe.ComponentConfigurationProperty[]</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-ami-builder.ImagePipeline.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@layerborn/cdk-image-pipeline.ImagePipeline.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -101,7 +101,7 @@ The tree node.
 
 ---
 
-##### `imageRecipeComponents`<sup>Required</sup> <a name="imageRecipeComponents" id="cdk-ami-builder.ImagePipeline.property.imageRecipeComponents"></a>
+##### `imageRecipeComponents`<sup>Required</sup> <a name="imageRecipeComponents" id="@layerborn/cdk-image-pipeline.ImagePipeline.property.imageRecipeComponents"></a>
 
 ```typescript
 public readonly imageRecipeComponents: ComponentConfigurationProperty[];
@@ -114,12 +114,12 @@ public readonly imageRecipeComponents: ComponentConfigurationProperty[];
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### ImagePipelineProps <a name="ImagePipelineProps" id="cdk-ami-builder.ImagePipelineProps"></a>
+### ImagePipelineProps <a name="ImagePipelineProps" id="@layerborn/cdk-image-pipeline.ImagePipelineProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-ami-builder.ImagePipelineProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.Initializer"></a>
 
 ```typescript
-import { ImagePipelineProps } from 'cdk-ami-builder'
+import { ImagePipelineProps } from '@layerborn/cdk-image-pipeline'
 
 const imagePipelineProps: ImagePipelineProps = { ... }
 ```
@@ -128,47 +128,47 @@ const imagePipelineProps: ImagePipelineProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.components">components</a></code> | <code><a href="#cdk-ami-builder.IComponentProps">IComponentProps</a>[]</code> | List of component props. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.parentImage">parentImage</a></code> | <code>string</code> | The source (parent) image that the image recipe uses as its base environment. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.subnetId">subnetId</a></code> | <code>string</code> | Subnet ID for the Infrastructure Configuration. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.additionalPolicies">additionalPolicies</a></code> | <code>aws-cdk-lib.aws_iam.ManagedPolicy[]</code> | Additional policies to add to the instance profile associated with the Instance Configurations. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.amiIdSsmAccountId">amiIdSsmAccountId</a></code> | <code>string</code> | Account ID for Parameter Store path above. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.amiIdSsmParameterName">amiIdSsmParameterName</a></code> | <code>string</code> | Parameter Store path to store latest AMI ID under. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.amiIdSsmRegion">amiIdSsmRegion</a></code> | <code>string</code> | Region for Parameter Store path above. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.distributionAccountIDs">distributionAccountIDs</a></code> | <code>string[]</code> | List of accounts to copy this AMI to, if the option to do so is enabled. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.distributionRegions">distributionRegions</a></code> | <code>string[]</code> | List of regions to copy this AMI to, if the option to do so is enabled. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.ebsVolumeConfigurations">ebsVolumeConfigurations</a></code> | <code><a href="#cdk-ami-builder.VolumeProps">VolumeProps</a>[]</code> | Configuration for the AMI's EBS volumes. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.email">email</a></code> | <code>string</code> | Email used to receive Image Builder Pipeline Notifications via SNS. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.enableCrossAccountDistribution">enableCrossAccountDistribution</a></code> | <code>boolean</code> | Set to true if you want to copy this AMI to other accounts using a Distribution Configuration. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.enableVulnScans">enableVulnScans</a></code> | <code>boolean</code> | Set to true if you want to enable continuous vulnerability scans through AWS Inpector. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.imageRecipeName">imageRecipeName</a></code> | <code>string</code> | Name of the Image Recipe. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.imageRecipeVersion">imageRecipeVersion</a></code> | <code>string</code> | Image recipe version (Default: 0.0.1). |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.infraConfigName">infraConfigName</a></code> | <code>string</code> | Name of the Infrastructure Configuration for Image Builder. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.instanceTypes">instanceTypes</a></code> | <code>string[]</code> | List of instance types used in the Instance Configuration (Default: [ 't3.medium', 'm5.large', 'm5.xlarge' ]). |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.kmsKey">kmsKey</a></code> | <code>aws-cdk-lib.aws_kms.Key</code> | KMS Key used to encrypt the SNS topic. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.pipelineName">pipelineName</a></code> | <code>string</code> | Name of the Image Pipeline. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.platform">platform</a></code> | <code>string</code> | Platform type Linux or Windows (Default: Linux). |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.profileName">profileName</a></code> | <code>string</code> | Name of the instance profile that will be associated with the Instance Configuration. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.securityGroups">securityGroups</a></code> | <code>string[]</code> | List of security group IDs for the Infrastructure Configuration. |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.userDataScript">userDataScript</a></code> | <code>string</code> | UserData script that will override default one (if specified). |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.vulnScansRepoName">vulnScansRepoName</a></code> | <code>string</code> | Store vulnerability scans through AWS Inspector in ECR using this repo name (if option is enabled). |
-| <code><a href="#cdk-ami-builder.ImagePipelineProps.property.vulnScansRepoTags">vulnScansRepoTags</a></code> | <code>string[]</code> | Store vulnerability scans through AWS Inspector in ECR using these image tags (if option is enabled). |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.components">components</a></code> | <code><a href="#@layerborn/cdk-image-pipeline.IComponentProps">IComponentProps</a>[]</code> | List of component props. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.parentImage">parentImage</a></code> | <code>string</code> | The source (parent) image that the image recipe uses as its base environment. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.Vpc</code> | Vpc to use for the Image Builder Pipeline. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.additionalPolicies">additionalPolicies</a></code> | <code>aws-cdk-lib.aws_iam.ManagedPolicy[]</code> | Additional policies to add to the instance profile associated with the Instance Configurations. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.amiIdSsmAccountId">amiIdSsmAccountId</a></code> | <code>string</code> | Account ID for Parameter Store path above. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.amiIdSsmParameterName">amiIdSsmParameterName</a></code> | <code>string</code> | Parameter Store path to store latest AMI ID under. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.amiIdSsmRegion">amiIdSsmRegion</a></code> | <code>string</code> | Region for Parameter Store path above. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.distributionAccountIDs">distributionAccountIDs</a></code> | <code>string[]</code> | List of accounts to copy this AMI to, if the option to do so is enabled. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.distributionRegions">distributionRegions</a></code> | <code>string[]</code> | List of regions to copy this AMI to, if the option to do so is enabled. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.ebsVolumeConfigurations">ebsVolumeConfigurations</a></code> | <code><a href="#@layerborn/cdk-image-pipeline.VolumeProps">VolumeProps</a>[]</code> | Subnet ID for the Infrastructure Configuration. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.email">email</a></code> | <code>string</code> | Email used to receive Image Builder Pipeline Notifications via SNS. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.enableCrossAccountDistribution">enableCrossAccountDistribution</a></code> | <code>boolean</code> | Set to true if you want to copy this AMI to other accounts using a Distribution Configuration. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.enableVulnScans">enableVulnScans</a></code> | <code>boolean</code> | Set to true if you want to enable continuous vulnerability scans through AWS Inpector. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.imageRecipeName">imageRecipeName</a></code> | <code>string</code> | Name of the Image Recipe. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.imageRecipeVersion">imageRecipeVersion</a></code> | <code>string</code> | Image recipe version (Default: 0.0.1). |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.infraConfigName">infraConfigName</a></code> | <code>string</code> | Name of the Infrastructure Configuration for Image Builder. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.instanceTypes">instanceTypes</a></code> | <code>string[]</code> | List of instance types used in the Instance Configuration (Default: [ 't3.medium', 'm5.large', 'm5.xlarge' ]). |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.kmsKey">kmsKey</a></code> | <code>aws-cdk-lib.aws_kms.Key</code> | KMS Key used to encrypt the SNS topic. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.pipelineName">pipelineName</a></code> | <code>string</code> | Name of the Image Pipeline. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.platform">platform</a></code> | <code>string</code> | Platform type Linux or Windows (Default: Linux). |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.profileName">profileName</a></code> | <code>string</code> | Name of the instance profile that will be associated with the Instance Configuration. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.securityGroupIds">securityGroupIds</a></code> | <code>string[]</code> | List of security group IDs for the Infrastructure Configuration. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.userDataScript">userDataScript</a></code> | <code>string</code> | UserData script that will override default one (if specified). |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.vulnScansRepoName">vulnScansRepoName</a></code> | <code>string</code> | Store vulnerability scans through AWS Inspector in ECR using this repo name (if option is enabled). |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipelineProps.property.vulnScansRepoTags">vulnScansRepoTags</a></code> | <code>string[]</code> | Store vulnerability scans through AWS Inspector in ECR using these image tags (if option is enabled). |
 
 ---
 
-##### `components`<sup>Required</sup> <a name="components" id="cdk-ami-builder.ImagePipelineProps.property.components"></a>
+##### `components`<sup>Required</sup> <a name="components" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.components"></a>
 
 ```typescript
 public readonly components: IComponentProps[];
 ```
 
-- *Type:* <a href="#cdk-ami-builder.IComponentProps">IComponentProps</a>[]
+- *Type:* <a href="#@layerborn/cdk-image-pipeline.IComponentProps">IComponentProps</a>[]
 
 List of component props.
 
 ---
 
-##### `parentImage`<sup>Required</sup> <a name="parentImage" id="cdk-ami-builder.ImagePipelineProps.property.parentImage"></a>
+##### `parentImage`<sup>Required</sup> <a name="parentImage" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.parentImage"></a>
 
 ```typescript
 public readonly parentImage: string;
@@ -182,19 +182,19 @@ The value can be the parent image ARN or an Image Builder AMI ID
 
 ---
 
-##### `subnetId`<sup>Required</sup> <a name="subnetId" id="cdk-ami-builder.ImagePipelineProps.property.subnetId"></a>
+##### `vpc`<sup>Required</sup> <a name="vpc" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.vpc"></a>
 
 ```typescript
-public readonly subnetId: string;
+public readonly vpc: Vpc;
 ```
 
-- *Type:* string
+- *Type:* aws-cdk-lib.aws_ec2.Vpc
 
-Subnet ID for the Infrastructure Configuration.
+Vpc to use for the Image Builder Pipeline.
 
 ---
 
-##### `additionalPolicies`<sup>Optional</sup> <a name="additionalPolicies" id="cdk-ami-builder.ImagePipelineProps.property.additionalPolicies"></a>
+##### `additionalPolicies`<sup>Optional</sup> <a name="additionalPolicies" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.additionalPolicies"></a>
 
 ```typescript
 public readonly additionalPolicies: ManagedPolicy[];
@@ -206,7 +206,7 @@ Additional policies to add to the instance profile associated with the Instance 
 
 ---
 
-##### `amiIdSsmAccountId`<sup>Optional</sup> <a name="amiIdSsmAccountId" id="cdk-ami-builder.ImagePipelineProps.property.amiIdSsmAccountId"></a>
+##### `amiIdSsmAccountId`<sup>Optional</sup> <a name="amiIdSsmAccountId" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.amiIdSsmAccountId"></a>
 
 ```typescript
 public readonly amiIdSsmAccountId: string;
@@ -218,7 +218,7 @@ Account ID for Parameter Store path above.
 
 ---
 
-##### `amiIdSsmParameterName`<sup>Optional</sup> <a name="amiIdSsmParameterName" id="cdk-ami-builder.ImagePipelineProps.property.amiIdSsmParameterName"></a>
+##### `amiIdSsmParameterName`<sup>Optional</sup> <a name="amiIdSsmParameterName" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.amiIdSsmParameterName"></a>
 
 ```typescript
 public readonly amiIdSsmParameterName: string;
@@ -230,7 +230,7 @@ Parameter Store path to store latest AMI ID under.
 
 ---
 
-##### `amiIdSsmRegion`<sup>Optional</sup> <a name="amiIdSsmRegion" id="cdk-ami-builder.ImagePipelineProps.property.amiIdSsmRegion"></a>
+##### `amiIdSsmRegion`<sup>Optional</sup> <a name="amiIdSsmRegion" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.amiIdSsmRegion"></a>
 
 ```typescript
 public readonly amiIdSsmRegion: string;
@@ -242,7 +242,7 @@ Region for Parameter Store path above.
 
 ---
 
-##### `distributionAccountIDs`<sup>Optional</sup> <a name="distributionAccountIDs" id="cdk-ami-builder.ImagePipelineProps.property.distributionAccountIDs"></a>
+##### `distributionAccountIDs`<sup>Optional</sup> <a name="distributionAccountIDs" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.distributionAccountIDs"></a>
 
 ```typescript
 public readonly distributionAccountIDs: string[];
@@ -254,7 +254,7 @@ List of accounts to copy this AMI to, if the option to do so is enabled.
 
 ---
 
-##### `distributionRegions`<sup>Optional</sup> <a name="distributionRegions" id="cdk-ami-builder.ImagePipelineProps.property.distributionRegions"></a>
+##### `distributionRegions`<sup>Optional</sup> <a name="distributionRegions" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.distributionRegions"></a>
 
 ```typescript
 public readonly distributionRegions: string[];
@@ -266,19 +266,19 @@ List of regions to copy this AMI to, if the option to do so is enabled.
 
 ---
 
-##### `ebsVolumeConfigurations`<sup>Optional</sup> <a name="ebsVolumeConfigurations" id="cdk-ami-builder.ImagePipelineProps.property.ebsVolumeConfigurations"></a>
+##### `ebsVolumeConfigurations`<sup>Optional</sup> <a name="ebsVolumeConfigurations" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.ebsVolumeConfigurations"></a>
 
 ```typescript
 public readonly ebsVolumeConfigurations: VolumeProps[];
 ```
 
-- *Type:* <a href="#cdk-ami-builder.VolumeProps">VolumeProps</a>[]
+- *Type:* <a href="#@layerborn/cdk-image-pipeline.VolumeProps">VolumeProps</a>[]
 
-Configuration for the AMI's EBS volumes.
+Subnet ID for the Infrastructure Configuration.
 
 ---
 
-##### `email`<sup>Optional</sup> <a name="email" id="cdk-ami-builder.ImagePipelineProps.property.email"></a>
+##### `email`<sup>Optional</sup> <a name="email" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.email"></a>
 
 ```typescript
 public readonly email: string;
@@ -290,7 +290,7 @@ Email used to receive Image Builder Pipeline Notifications via SNS.
 
 ---
 
-##### `enableCrossAccountDistribution`<sup>Optional</sup> <a name="enableCrossAccountDistribution" id="cdk-ami-builder.ImagePipelineProps.property.enableCrossAccountDistribution"></a>
+##### `enableCrossAccountDistribution`<sup>Optional</sup> <a name="enableCrossAccountDistribution" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.enableCrossAccountDistribution"></a>
 
 ```typescript
 public readonly enableCrossAccountDistribution: boolean;
@@ -302,7 +302,7 @@ Set to true if you want to copy this AMI to other accounts using a Distribution 
 
 ---
 
-##### `enableVulnScans`<sup>Optional</sup> <a name="enableVulnScans" id="cdk-ami-builder.ImagePipelineProps.property.enableVulnScans"></a>
+##### `enableVulnScans`<sup>Optional</sup> <a name="enableVulnScans" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.enableVulnScans"></a>
 
 ```typescript
 public readonly enableVulnScans: boolean;
@@ -314,7 +314,7 @@ Set to true if you want to enable continuous vulnerability scans through AWS Inp
 
 ---
 
-##### `imageRecipeName`<sup>Optional</sup> <a name="imageRecipeName" id="cdk-ami-builder.ImagePipelineProps.property.imageRecipeName"></a>
+##### `imageRecipeName`<sup>Optional</sup> <a name="imageRecipeName" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.imageRecipeName"></a>
 
 ```typescript
 public readonly imageRecipeName: string;
@@ -326,7 +326,7 @@ Name of the Image Recipe.
 
 ---
 
-##### `imageRecipeVersion`<sup>Optional</sup> <a name="imageRecipeVersion" id="cdk-ami-builder.ImagePipelineProps.property.imageRecipeVersion"></a>
+##### `imageRecipeVersion`<sup>Optional</sup> <a name="imageRecipeVersion" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.imageRecipeVersion"></a>
 
 ```typescript
 public readonly imageRecipeVersion: string;
@@ -338,7 +338,7 @@ Image recipe version (Default: 0.0.1).
 
 ---
 
-##### `infraConfigName`<sup>Optional</sup> <a name="infraConfigName" id="cdk-ami-builder.ImagePipelineProps.property.infraConfigName"></a>
+##### `infraConfigName`<sup>Optional</sup> <a name="infraConfigName" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.infraConfigName"></a>
 
 ```typescript
 public readonly infraConfigName: string;
@@ -350,7 +350,7 @@ Name of the Infrastructure Configuration for Image Builder.
 
 ---
 
-##### `instanceTypes`<sup>Optional</sup> <a name="instanceTypes" id="cdk-ami-builder.ImagePipelineProps.property.instanceTypes"></a>
+##### `instanceTypes`<sup>Optional</sup> <a name="instanceTypes" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.instanceTypes"></a>
 
 ```typescript
 public readonly instanceTypes: string[];
@@ -362,7 +362,7 @@ List of instance types used in the Instance Configuration (Default: [ 't3.medium
 
 ---
 
-##### `kmsKey`<sup>Optional</sup> <a name="kmsKey" id="cdk-ami-builder.ImagePipelineProps.property.kmsKey"></a>
+##### `kmsKey`<sup>Optional</sup> <a name="kmsKey" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.kmsKey"></a>
 
 ```typescript
 public readonly kmsKey: Key;
@@ -376,7 +376,7 @@ Enter an existing KMS Key in your target account/region.
 
 ---
 
-##### `pipelineName`<sup>Optional</sup> <a name="pipelineName" id="cdk-ami-builder.ImagePipelineProps.property.pipelineName"></a>
+##### `pipelineName`<sup>Optional</sup> <a name="pipelineName" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.pipelineName"></a>
 
 ```typescript
 public readonly pipelineName: string;
@@ -388,7 +388,7 @@ Name of the Image Pipeline.
 
 ---
 
-##### `platform`<sup>Optional</sup> <a name="platform" id="cdk-ami-builder.ImagePipelineProps.property.platform"></a>
+##### `platform`<sup>Optional</sup> <a name="platform" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.platform"></a>
 
 ```typescript
 public readonly platform: string;
@@ -400,7 +400,7 @@ Platform type Linux or Windows (Default: Linux).
 
 ---
 
-##### `profileName`<sup>Optional</sup> <a name="profileName" id="cdk-ami-builder.ImagePipelineProps.property.profileName"></a>
+##### `profileName`<sup>Optional</sup> <a name="profileName" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.profileName"></a>
 
 ```typescript
 public readonly profileName: string;
@@ -412,10 +412,10 @@ Name of the instance profile that will be associated with the Instance Configura
 
 ---
 
-##### `securityGroups`<sup>Optional</sup> <a name="securityGroups" id="cdk-ami-builder.ImagePipelineProps.property.securityGroups"></a>
+##### `securityGroupIds`<sup>Optional</sup> <a name="securityGroupIds" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.securityGroupIds"></a>
 
 ```typescript
-public readonly securityGroups: string[];
+public readonly securityGroupIds: string[];
 ```
 
 - *Type:* string[]
@@ -424,7 +424,7 @@ List of security group IDs for the Infrastructure Configuration.
 
 ---
 
-##### `userDataScript`<sup>Optional</sup> <a name="userDataScript" id="cdk-ami-builder.ImagePipelineProps.property.userDataScript"></a>
+##### `userDataScript`<sup>Optional</sup> <a name="userDataScript" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.userDataScript"></a>
 
 ```typescript
 public readonly userDataScript: string;
@@ -437,7 +437,7 @@ UserData script that will override default one (if specified).
 
 ---
 
-##### `vulnScansRepoName`<sup>Optional</sup> <a name="vulnScansRepoName" id="cdk-ami-builder.ImagePipelineProps.property.vulnScansRepoName"></a>
+##### `vulnScansRepoName`<sup>Optional</sup> <a name="vulnScansRepoName" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.vulnScansRepoName"></a>
 
 ```typescript
 public readonly vulnScansRepoName: string;
@@ -449,7 +449,7 @@ Store vulnerability scans through AWS Inspector in ECR using this repo name (if 
 
 ---
 
-##### `vulnScansRepoTags`<sup>Optional</sup> <a name="vulnScansRepoTags" id="cdk-ami-builder.ImagePipelineProps.property.vulnScansRepoTags"></a>
+##### `vulnScansRepoTags`<sup>Optional</sup> <a name="vulnScansRepoTags" id="@layerborn/cdk-image-pipeline.ImagePipelineProps.property.vulnScansRepoTags"></a>
 
 ```typescript
 public readonly vulnScansRepoTags: string[];
@@ -461,12 +461,12 @@ Store vulnerability scans through AWS Inspector in ECR using these image tags (i
 
 ---
 
-### VolumeProps <a name="VolumeProps" id="cdk-ami-builder.VolumeProps"></a>
+### VolumeProps <a name="VolumeProps" id="@layerborn/cdk-image-pipeline.VolumeProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-ami-builder.VolumeProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@layerborn/cdk-image-pipeline.VolumeProps.Initializer"></a>
 
 ```typescript
-import { VolumeProps } from 'cdk-ami-builder'
+import { VolumeProps } from '@layerborn/cdk-image-pipeline'
 
 const volumeProps: VolumeProps = { ... }
 ```
@@ -475,12 +475,12 @@ const volumeProps: VolumeProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-ami-builder.VolumeProps.property.deviceName">deviceName</a></code> | <code>string</code> | Name of the volume. |
-| <code><a href="#cdk-ami-builder.VolumeProps.property.ebs">ebs</a></code> | <code>aws-cdk-lib.aws_imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty</code> | EBS Block Store Parameters. |
+| <code><a href="#@layerborn/cdk-image-pipeline.VolumeProps.property.deviceName">deviceName</a></code> | <code>string</code> | Name of the volume. |
+| <code><a href="#@layerborn/cdk-image-pipeline.VolumeProps.property.ebs">ebs</a></code> | <code>aws-cdk-lib.aws_imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty</code> | EBS Block Store Parameters. |
 
 ---
 
-##### `deviceName`<sup>Required</sup> <a name="deviceName" id="cdk-ami-builder.VolumeProps.property.deviceName"></a>
+##### `deviceName`<sup>Required</sup> <a name="deviceName" id="@layerborn/cdk-image-pipeline.VolumeProps.property.deviceName"></a>
 
 ```typescript
 public readonly deviceName: string;
@@ -492,7 +492,7 @@ Name of the volume.
 
 ---
 
-##### `ebs`<sup>Required</sup> <a name="ebs" id="cdk-ami-builder.VolumeProps.property.ebs"></a>
+##### `ebs`<sup>Required</sup> <a name="ebs" id="@layerborn/cdk-image-pipeline.VolumeProps.property.ebs"></a>
 
 ```typescript
 public readonly ebs: EbsInstanceBlockDeviceSpecificationProperty;
@@ -507,20 +507,22 @@ EBS Block Store Parameters.
 
 ## Protocols <a name="Protocols" id="Protocols"></a>
 
-### IBuildCommands <a name="IBuildCommands" id="cdk-ami-builder.IBuildCommands"></a>
+### IActionCommands <a name="IActionCommands" id="@layerborn/cdk-image-pipeline.IActionCommands"></a>
 
-- *Implemented By:* <a href="#cdk-ami-builder.IBuildCommands">IBuildCommands</a>
+- *Implemented By:* <a href="#@layerborn/cdk-image-pipeline.IActionCommands">IActionCommands</a>
+
+Build commands for the component.
 
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-ami-builder.IBuildCommands.property.commands">commands</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IActionCommands.property.commands">commands</a></code> | <code>string[]</code> | *No description.* |
 
 ---
 
-##### `commands`<sup>Required</sup> <a name="commands" id="cdk-ami-builder.IBuildCommands.property.commands"></a>
+##### `commands`<sup>Required</sup> <a name="commands" id="@layerborn/cdk-image-pipeline.IActionCommands.property.commands"></a>
 
 ```typescript
 public readonly commands: string[];
@@ -530,22 +532,25 @@ public readonly commands: string[];
 
 ---
 
-### IComponentData <a name="IComponentData" id="cdk-ami-builder.IComponentData"></a>
+### IComponentDocument <a name="IComponentDocument" id="@layerborn/cdk-image-pipeline.IComponentDocument"></a>
 
-- *Implemented By:* <a href="#cdk-ami-builder.IComponentData">IComponentData</a>
+- *Implemented By:* <a href="#@layerborn/cdk-image-pipeline.IComponentDocument">IComponentDocument</a>
+
+Component data.
 
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-ami-builder.IComponentData.property.description">description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-ami-builder.IComponentData.property.phases">phases</a></code> | <code><a href="#cdk-ami-builder.IPhaseCommands">IPhaseCommands</a></code> | *No description.* |
-| <code><a href="#cdk-ami-builder.IComponentData.property.schemaVersion">schemaVersion</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentDocument.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentDocument.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentDocument.property.phases">phases</a></code> | <code><a href="#@layerborn/cdk-image-pipeline.IPhases">IPhases</a>[]</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentDocument.property.schemaVersion">schemaVersion</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `description`<sup>Required</sup> <a name="description" id="cdk-ami-builder.IComponentData.property.description"></a>
+##### `description`<sup>Required</sup> <a name="description" id="@layerborn/cdk-image-pipeline.IComponentDocument.property.description"></a>
 
 ```typescript
 public readonly description: string;
@@ -555,64 +560,7 @@ public readonly description: string;
 
 ---
 
-##### `phases`<sup>Required</sup> <a name="phases" id="cdk-ami-builder.IComponentData.property.phases"></a>
-
-```typescript
-public readonly phases: IPhaseCommands;
-```
-
-- *Type:* <a href="#cdk-ami-builder.IPhaseCommands">IPhaseCommands</a>
-
----
-
-##### `schemaVersion`<sup>Required</sup> <a name="schemaVersion" id="cdk-ami-builder.IComponentData.property.schemaVersion"></a>
-
-```typescript
-public readonly schemaVersion: string;
-```
-
-- *Type:* string
-
----
-
-### IComponentProps <a name="IComponentProps" id="cdk-ami-builder.IComponentProps"></a>
-
-- *Implemented By:* <a href="#cdk-ami-builder.IComponentProps">IComponentProps</a>
-
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#cdk-ami-builder.IComponentProps.property.data">data</a></code> | <code><a href="#cdk-ami-builder.IComponentData">IComponentData</a></code> | *No description.* |
-| <code><a href="#cdk-ami-builder.IComponentProps.property.description">description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-ami-builder.IComponentProps.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-ami-builder.IComponentProps.property.version">version</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-ami-builder.IComponentProps.property.platform">platform</a></code> | <code>string</code> | *No description.* |
-
----
-
-##### `data`<sup>Required</sup> <a name="data" id="cdk-ami-builder.IComponentProps.property.data"></a>
-
-```typescript
-public readonly data: IComponentData;
-```
-
-- *Type:* <a href="#cdk-ami-builder.IComponentData">IComponentData</a>
-
----
-
-##### `description`<sup>Required</sup> <a name="description" id="cdk-ami-builder.IComponentProps.property.description"></a>
-
-```typescript
-public readonly description: string;
-```
-
-- *Type:* string
-
----
-
-##### `name`<sup>Required</sup> <a name="name" id="cdk-ami-builder.IComponentProps.property.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="@layerborn/cdk-image-pipeline.IComponentDocument.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -622,17 +570,97 @@ public readonly name: string;
 
 ---
 
-##### `version`<sup>Required</sup> <a name="version" id="cdk-ami-builder.IComponentProps.property.version"></a>
+##### `phases`<sup>Required</sup> <a name="phases" id="@layerborn/cdk-image-pipeline.IComponentDocument.property.phases"></a>
 
 ```typescript
-public readonly version: string;
+public readonly phases: IPhases[];
+```
+
+- *Type:* <a href="#@layerborn/cdk-image-pipeline.IPhases">IPhases</a>[]
+
+---
+
+##### `schemaVersion`<sup>Required</sup> <a name="schemaVersion" id="@layerborn/cdk-image-pipeline.IComponentDocument.property.schemaVersion"></a>
+
+```typescript
+public readonly schemaVersion: string;
 ```
 
 - *Type:* string
 
 ---
 
-##### `platform`<sup>Optional</sup> <a name="platform" id="cdk-ami-builder.IComponentProps.property.platform"></a>
+### IComponentProps <a name="IComponentProps" id="@layerborn/cdk-image-pipeline.IComponentProps"></a>
+
+- *Implemented By:* <a href="#@layerborn/cdk-image-pipeline.IComponentProps">IComponentProps</a>
+
+Component props.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentProps.property.componentDocument">componentDocument</a></code> | <code><a href="#@layerborn/cdk-image-pipeline.IComponentDocument">IComponentDocument</a></code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentProps.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentProps.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentProps.property.schemaVersion">schemaVersion</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentProps.property.parameters">parameters</a></code> | <code>{[ key: string ]: <a href="#@layerborn/cdk-image-pipeline.IInputParameter">IInputParameter</a>}</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IComponentProps.property.platform">platform</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `componentDocument`<sup>Required</sup> <a name="componentDocument" id="@layerborn/cdk-image-pipeline.IComponentProps.property.componentDocument"></a>
+
+```typescript
+public readonly componentDocument: IComponentDocument;
+```
+
+- *Type:* <a href="#@layerborn/cdk-image-pipeline.IComponentDocument">IComponentDocument</a>
+
+---
+
+##### `description`<sup>Required</sup> <a name="description" id="@layerborn/cdk-image-pipeline.IComponentProps.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@layerborn/cdk-image-pipeline.IComponentProps.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `schemaVersion`<sup>Required</sup> <a name="schemaVersion" id="@layerborn/cdk-image-pipeline.IComponentProps.property.schemaVersion"></a>
+
+```typescript
+public readonly schemaVersion: string;
+```
+
+- *Type:* string
+
+---
+
+##### `parameters`<sup>Optional</sup> <a name="parameters" id="@layerborn/cdk-image-pipeline.IComponentProps.property.parameters"></a>
+
+```typescript
+public readonly parameters: {[ key: string ]: IInputParameter};
+```
+
+- *Type:* {[ key: string ]: <a href="#@layerborn/cdk-image-pipeline.IInputParameter">IInputParameter</a>}
+
+---
+
+##### `platform`<sup>Optional</sup> <a name="platform" id="@layerborn/cdk-image-pipeline.IComponentProps.property.platform"></a>
 
 ```typescript
 public readonly platform: string;
@@ -642,26 +670,129 @@ public readonly platform: string;
 
 ---
 
-### IPhaseCommands <a name="IPhaseCommands" id="cdk-ami-builder.IPhaseCommands"></a>
+### IInputParameter <a name="IInputParameter" id="@layerborn/cdk-image-pipeline.IInputParameter"></a>
 
-- *Implemented By:* <a href="#cdk-ami-builder.IPhaseCommands">IPhaseCommands</a>
+- *Implemented By:* <a href="#@layerborn/cdk-image-pipeline.IInputParameter">IInputParameter</a>
 
 
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-ami-builder.IPhaseCommands.property.buildCommands">buildCommands</a></code> | <code><a href="#cdk-ami-builder.IBuildCommands">IBuildCommands</a></code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IInputParameter.property.default">default</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IInputParameter.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IInputParameter.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `buildCommands`<sup>Required</sup> <a name="buildCommands" id="cdk-ami-builder.IPhaseCommands.property.buildCommands"></a>
+##### `default`<sup>Required</sup> <a name="default" id="@layerborn/cdk-image-pipeline.IInputParameter.property.default"></a>
 
 ```typescript
-public readonly buildCommands: IBuildCommands;
+public readonly default: string;
 ```
 
-- *Type:* <a href="#cdk-ami-builder.IBuildCommands">IBuildCommands</a>
+- *Type:* string
+
+---
+
+##### `description`<sup>Required</sup> <a name="description" id="@layerborn/cdk-image-pipeline.IInputParameter.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@layerborn/cdk-image-pipeline.IInputParameter.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* string
+
+---
+
+### IPhases <a name="IPhases" id="@layerborn/cdk-image-pipeline.IPhases"></a>
+
+- *Implemented By:* <a href="#@layerborn/cdk-image-pipeline.IPhases">IPhases</a>
+
+Phases for the component.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@layerborn/cdk-image-pipeline.IPhases.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IPhases.property.steps">steps</a></code> | <code><a href="#@layerborn/cdk-image-pipeline.IStepCommands">IStepCommands</a>[]</code> | *No description.* |
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@layerborn/cdk-image-pipeline.IPhases.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `steps`<sup>Required</sup> <a name="steps" id="@layerborn/cdk-image-pipeline.IPhases.property.steps"></a>
+
+```typescript
+public readonly steps: IStepCommands[];
+```
+
+- *Type:* <a href="#@layerborn/cdk-image-pipeline.IStepCommands">IStepCommands</a>[]
+
+---
+
+### IStepCommands <a name="IStepCommands" id="@layerborn/cdk-image-pipeline.IStepCommands"></a>
+
+- *Implemented By:* <a href="#@layerborn/cdk-image-pipeline.IStepCommands">IStepCommands</a>
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@layerborn/cdk-image-pipeline.IStepCommands.property.action">action</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IStepCommands.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@layerborn/cdk-image-pipeline.IStepCommands.property.inputs">inputs</a></code> | <code><a href="#@layerborn/cdk-image-pipeline.IActionCommands">IActionCommands</a></code> | *No description.* |
+
+---
+
+##### `action`<sup>Required</sup> <a name="action" id="@layerborn/cdk-image-pipeline.IStepCommands.property.action"></a>
+
+```typescript
+public readonly action: string;
+```
+
+- *Type:* string
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@layerborn/cdk-image-pipeline.IStepCommands.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `inputs`<sup>Optional</sup> <a name="inputs" id="@layerborn/cdk-image-pipeline.IStepCommands.property.inputs"></a>
+
+```typescript
+public readonly inputs: IActionCommands;
+```
+
+- *Type:* <a href="#@layerborn/cdk-image-pipeline.IActionCommands">IActionCommands</a>
 
 ---
 

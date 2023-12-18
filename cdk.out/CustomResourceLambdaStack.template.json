@@ -3,19 +3,19 @@
   "Vpc8378EB38": {
    "Type": "AWS::EC2::VPC",
    "Properties": {
-    "CidrBlock": "12.0.0.0/16",
+    "CidrBlock": "13.0.0.0/16",
     "EnableDnsHostnames": true,
     "EnableDnsSupport": true,
     "InstanceTenancy": "default",
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc"
+      "Value": "CustomResourceLambdaStack/Vpc"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/Resource"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/Resource"
    }
   },
   "VpcPublicSubnet1Subnet5C2D37C4": {
@@ -29,7 +29,7 @@
       }
      ]
     },
-    "CidrBlock": "12.0.0.0/24",
+    "CidrBlock": "13.0.0.0/24",
     "MapPublicIpOnLaunch": true,
     "Tags": [
      {
@@ -42,7 +42,7 @@
      },
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+      "Value": "CustomResourceLambdaStack/Vpc/PublicSubnet1"
      }
     ],
     "VpcId": {
@@ -50,7 +50,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/Subnet"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet1/Subnet"
    }
   },
   "VpcPublicSubnet1RouteTable6C95E38E": {
@@ -59,7 +59,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+      "Value": "CustomResourceLambdaStack/Vpc/PublicSubnet1"
      }
     ],
     "VpcId": {
@@ -67,7 +67,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/RouteTable"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet1/RouteTable"
    }
   },
   "VpcPublicSubnet1RouteTableAssociation97140677": {
@@ -81,7 +81,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/RouteTableAssociation"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet1/RouteTableAssociation"
    }
   },
   "VpcPublicSubnet1DefaultRoute3DA9E72A": {
@@ -99,7 +99,7 @@
     "VpcVPCGWBF912B6E"
    ],
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/DefaultRoute"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet1/DefaultRoute"
    }
   },
   "VpcPublicSubnet1EIPD7E02669": {
@@ -109,12 +109,12 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+      "Value": "CustomResourceLambdaStack/Vpc/PublicSubnet1"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/EIP"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet1/EIP"
    }
   },
   "VpcPublicSubnet1NATGateway4D7517AA": {
@@ -132,7 +132,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1"
+      "Value": "CustomResourceLambdaStack/Vpc/PublicSubnet1"
      }
     ]
    },
@@ -141,7 +141,7 @@
     "VpcPublicSubnet1RouteTableAssociation97140677"
    ],
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet1/NATGateway"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet1/NATGateway"
    }
   },
   "VpcPublicSubnet2Subnet691E08A3": {
@@ -155,7 +155,7 @@
       }
      ]
     },
-    "CidrBlock": "12.0.1.0/24",
+    "CidrBlock": "13.0.1.0/24",
     "MapPublicIpOnLaunch": true,
     "Tags": [
      {
@@ -168,7 +168,7 @@
      },
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2"
+      "Value": "CustomResourceLambdaStack/Vpc/PublicSubnet2"
      }
     ],
     "VpcId": {
@@ -176,7 +176,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/Subnet"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet2/Subnet"
    }
   },
   "VpcPublicSubnet2RouteTable94F7E489": {
@@ -185,7 +185,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2"
+      "Value": "CustomResourceLambdaStack/Vpc/PublicSubnet2"
      }
     ],
     "VpcId": {
@@ -193,7 +193,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/RouteTable"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet2/RouteTable"
    }
   },
   "VpcPublicSubnet2RouteTableAssociationDD5762D8": {
@@ -207,7 +207,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/RouteTableAssociation"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet2/RouteTableAssociation"
    }
   },
   "VpcPublicSubnet2DefaultRoute97F91067": {
@@ -225,7 +225,7 @@
     "VpcVPCGWBF912B6E"
    ],
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PublicSubnet2/DefaultRoute"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PublicSubnet2/DefaultRoute"
    }
   },
   "VpcPrivateSubnet1Subnet536B997A": {
@@ -239,7 +239,7 @@
       }
      ]
     },
-    "CidrBlock": "12.0.2.0/24",
+    "CidrBlock": "13.0.2.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
      {
@@ -252,7 +252,7 @@
      },
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1"
+      "Value": "CustomResourceLambdaStack/Vpc/PrivateSubnet1"
      }
     ],
     "VpcId": {
@@ -260,7 +260,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/Subnet"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet1/Subnet"
    }
   },
   "VpcPrivateSubnet1RouteTableB2C5B500": {
@@ -269,7 +269,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1"
+      "Value": "CustomResourceLambdaStack/Vpc/PrivateSubnet1"
      }
     ],
     "VpcId": {
@@ -277,7 +277,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/RouteTable"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet1/RouteTable"
    }
   },
   "VpcPrivateSubnet1RouteTableAssociation70C59FA6": {
@@ -291,7 +291,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/RouteTableAssociation"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet1/RouteTableAssociation"
    }
   },
   "VpcPrivateSubnet1DefaultRouteBE02A9ED": {
@@ -306,7 +306,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet1/DefaultRoute"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet1/DefaultRoute"
    }
   },
   "VpcPrivateSubnet2Subnet3788AAA1": {
@@ -320,7 +320,7 @@
       }
      ]
     },
-    "CidrBlock": "12.0.3.0/24",
+    "CidrBlock": "13.0.3.0/24",
     "MapPublicIpOnLaunch": false,
     "Tags": [
      {
@@ -333,7 +333,7 @@
      },
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2"
+      "Value": "CustomResourceLambdaStack/Vpc/PrivateSubnet2"
      }
     ],
     "VpcId": {
@@ -341,7 +341,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/Subnet"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet2/Subnet"
    }
   },
   "VpcPrivateSubnet2RouteTableA678073B": {
@@ -350,7 +350,7 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2"
+      "Value": "CustomResourceLambdaStack/Vpc/PrivateSubnet2"
      }
     ],
     "VpcId": {
@@ -358,7 +358,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/RouteTable"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet2/RouteTable"
    }
   },
   "VpcPrivateSubnet2RouteTableAssociationA89CAD56": {
@@ -372,7 +372,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/RouteTableAssociation"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet2/RouteTableAssociation"
    }
   },
   "VpcPrivateSubnet2DefaultRoute060D2087": {
@@ -387,7 +387,7 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/PrivateSubnet2/DefaultRoute"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/PrivateSubnet2/DefaultRoute"
    }
   },
   "VpcIGWD7BA715C": {
@@ -396,12 +396,12 @@
     "Tags": [
      {
       "Key": "Name",
-      "Value": "ImageBuilderTestStackSimple/Vpc"
+      "Value": "CustomResourceLambdaStack/Vpc"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/IGW"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/IGW"
    }
   },
   "VpcVPCGWBF912B6E": {
@@ -415,19 +415,10 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/Vpc/VPCGW"
+    "aws:cdk:path": "CustomResourceLambdaStack/Vpc/VPCGW"
    }
   },
-  "ImagePipelineImageBuilderTopic5AF43CD3": {
-   "Type": "AWS::SNS::Topic",
-   "Properties": {
-    "DisplayName": "Image Builder Notify"
-   },
-   "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/ImageBuilderTopic/Resource"
-   }
-  },
-  "ImagePipelineRole10746E1A": {
+  "CustomResourceLambdaStackServiceRole98D41890": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -436,13 +427,12 @@
        "Action": "sts:AssumeRole",
        "Effect": "Allow",
        "Principal": {
-        "Service": "ec2.amazonaws.com"
+        "Service": "lambda.amazonaws.com"
        }
       }
      ],
      "Version": "2012-10-17"
     },
-    "Description": "IAM role used as part of an Image Builder pipeline",
     "ManagedPolicyArns": [
      {
       "Fn::Join": [
@@ -452,7 +442,7 @@
         {
          "Ref": "AWS::Partition"
         },
-        ":iam::aws:policy/EC2InstanceProfileForImageBuilder"
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
        ]
       ]
      },
@@ -464,87 +454,26 @@
         {
          "Ref": "AWS::Partition"
         },
-        ":iam::aws:policy/EC2InstanceProfileForImageBuilderECRContainerBuilds"
-       ]
-      ]
-     },
-     {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":iam::aws:policy/AmazonSSMManagedInstanceCore"
+        ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
        ]
       ]
      }
     ]
    },
+   "DependsOn": [
+    "VpcPrivateSubnet1DefaultRouteBE02A9ED",
+    "VpcPrivateSubnet1RouteTableAssociation70C59FA6",
+    "VpcPrivateSubnet2DefaultRoute060D2087",
+    "VpcPrivateSubnet2RouteTableAssociationA89CAD56"
+   ],
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/Role/Resource"
+    "aws:cdk:path": "CustomResourceLambdaStack/CustomResourceLambdaStack/ServiceRole/Resource"
    }
   },
-  "ImagePipelineKmsKeyBE0C41F8": {
-   "Type": "AWS::KMS::Key",
-   "Properties": {
-    "Description": "KMS Key used to encrypt the SNS topic",
-    "EnableKeyRotation": true,
-    "KeyPolicy": {
-     "Statement": [
-      {
-       "Action": "kms:*",
-       "Effect": "Allow",
-       "Principal": {
-        "AWS": {
-         "Fn::Join": [
-          "",
-          [
-           "arn:",
-           {
-            "Ref": "AWS::Partition"
-           },
-           ":iam::",
-           {
-            "Ref": "AWS::AccountId"
-           },
-           ":root"
-          ]
-         ]
-        }
-       },
-       "Resource": "*"
-      }
-     ],
-     "Version": "2012-10-17"
-    }
-   },
-   "UpdateReplacePolicy": "Delete",
-   "DeletionPolicy": "Delete",
-   "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/KmsKey/Resource"
-   }
-  },
-  "ImagePipelineInstanceProfile98436885": {
-   "Type": "AWS::IAM::InstanceProfile",
-   "Properties": {
-    "InstanceProfileName": "ImagePipeline-InstanceProfile",
-    "Roles": [
-     {
-      "Ref": "ImagePipelineRole10746E1A"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/InstanceProfile"
-   }
-  },
-  "ImagePipelineSecurityGroupC109FEA2": {
+  "CustomResourceLambdaStackSecurityGroupAE614C7E": {
    "Type": "AWS::EC2::SecurityGroup",
    "Properties": {
-    "GroupDescription": "ImageBuilderTestStackSimple/ImagePipeline/SecurityGroup",
-    "GroupName": "ImageBuilderSecurityGroup",
+    "GroupDescription": "Automatic security group for Lambda Function CustomResourceLambdaStack17A81F68",
     "SecurityGroupEgress": [
      {
       "CidrIp": "0.0.0.0/0",
@@ -556,121 +485,241 @@
      "Ref": "Vpc8378EB38"
     }
    },
+   "DependsOn": [
+    "VpcPrivateSubnet1DefaultRouteBE02A9ED",
+    "VpcPrivateSubnet1RouteTableAssociation70C59FA6",
+    "VpcPrivateSubnet2DefaultRoute060D2087",
+    "VpcPrivateSubnet2RouteTableAssociationA89CAD56"
+   ],
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/SecurityGroup/Resource"
+    "aws:cdk:path": "CustomResourceLambdaStack/CustomResourceLambdaStack/SecurityGroup/Resource"
    }
   },
-  "ImagePipelineInfrastructureConfigurationF13D357B": {
-   "Type": "AWS::ImageBuilder::InfrastructureConfiguration",
+  "CustomResourceLambdaStack31DE7910": {
+   "Type": "AWS::Lambda::Function",
    "Properties": {
-    "Description": "Example Infrastructure Configuration for Image Builder",
-    "InstanceProfileName": "ImagePipeline-InstanceProfile",
-    "InstanceTypes": [
-     "t3.medium",
-     "m5.large",
-     "m5.xlarge"
-    ],
-    "Name": "ImagePipeline-InfrastructureConfiguration",
-    "SecurityGroupIds": [
-     {
-      "Fn::GetAtt": [
-       "ImagePipelineSecurityGroupC109FEA2",
-       "GroupId"
-      ]
-     }
-    ],
-    "SnsTopicArn": {
-     "Ref": "ImagePipelineImageBuilderTopic5AF43CD3"
+    "Code": {
+     "S3Bucket": {
+      "Fn::Sub": "cdk-tests-assets-${AWS::AccountId}-${AWS::Region}"
+     },
+     "S3Key": "43b3c286a719c056ceab231cd9b179a8108f0109fed95f9b7ff3b5a5b3372ae1.zip"
     },
-    "SubnetId": {
-     "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
+    "Description": "CustomResourceLambdaStack",
+    "Environment": {
+     "Variables": {
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+     }
+    },
+    "FunctionName": "CustomResourceLambdaStack",
+    "Handler": "index.handler",
+    "MemorySize": 128,
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomResourceLambdaStackServiceRole98D41890",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Timeout": 60,
+    "VpcConfig": {
+     "SecurityGroupIds": [
+      {
+       "Fn::GetAtt": [
+        "CustomResourceLambdaStackSecurityGroupAE614C7E",
+        "GroupId"
+       ]
+      }
+     ],
+     "SubnetIds": [
+      {
+       "Ref": "VpcPrivateSubnet1Subnet536B997A"
+      },
+      {
+       "Ref": "VpcPrivateSubnet2Subnet3788AAA1"
+      }
+     ]
     }
    },
    "DependsOn": [
-    "ImagePipelineInstanceProfile98436885"
+    "CustomResourceLambdaStackServiceRole98D41890",
+    "VpcPrivateSubnet1DefaultRouteBE02A9ED",
+    "VpcPrivateSubnet1RouteTableAssociation70C59FA6",
+    "VpcPrivateSubnet2DefaultRoute060D2087",
+    "VpcPrivateSubnet2RouteTableAssociationA89CAD56"
    ],
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/InfrastructureConfiguration"
+    "aws:cdk:path": "CustomResourceLambdaStack/CustomResourceLambdaStack/Resource",
+    "aws:asset:path": "asset.43b3c286a719c056ceab231cd9b179a8108f0109fed95f9b7ff3b5a5b3372ae1.lambda",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
    }
   },
-  "ImagePipelineImageRecipeA26BB9F6": {
-   "Type": "AWS::ImageBuilder::ImageRecipe",
+  "CustomResourceProviderframeworkonEventServiceRole7EBC5835": {
+   "Type": "AWS::IAM::Role",
    "Properties": {
-    "Components": [
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
      {
-      "ComponentArn": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CustomResourceLambdaStack/CustomResourceProvider/framework-onEvent/ServiceRole/Resource"
+   }
+  },
+  "CustomResourceProviderframeworkonEventServiceRoleDefaultPolicy93CD1647": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "lambda:InvokeFunction",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "CustomResourceLambdaStack31DE7910",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "CustomResourceLambdaStack31DE7910",
+             "Arn"
+            ]
+           },
+           ":*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "CustomResourceProviderframeworkonEventServiceRoleDefaultPolicy93CD1647",
+    "Roles": [
+     {
+      "Ref": "CustomResourceProviderframeworkonEventServiceRole7EBC5835"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CustomResourceLambdaStack/CustomResourceProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "CustomResourceProviderframeworkonEvent0AA4376C": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Fn::Sub": "cdk-tests-assets-${AWS::AccountId}-${AWS::Region}"
+     },
+     "S3Key": "7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94.zip"
+    },
+    "Description": "AWS CDK resource provider framework - onEvent (CustomResourceLambdaStack/CustomResourceProvider)",
+    "Environment": {
+     "Variables": {
+      "USER_ON_EVENT_FUNCTION_ARN": {
        "Fn::GetAtt": [
-        "ImagePipelineTestComponentEDC11BE8",
+        "CustomResourceLambdaStack31DE7910",
         "Arn"
        ]
       }
      }
-    ],
-    "Name": "ImagePipeline-ImageRecipe",
-    "ParentImage": {
-     "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
     },
-    "Version": "0.0.1"
-   },
-   "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/ImageRecipe"
-   }
-  },
-  "ImagePipelineTestComponentEDC11BE8": {
-   "Type": "AWS::ImageBuilder::Component",
-   "Properties": {
-    "Data": "name: TestComponent\ndescription: Test Component\nschemaVersion: '1.0'\nphases:\n  - name: build\n    steps:\n      - name: hello\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World\"\n",
-    "Description": "Test Component",
-    "Name": "TestComponent",
-    "Platform": "Linux",
-    "Version": "1.0.0"
-   },
-   "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/TestComponent"
-   }
-  },
-  "ImagePipelineC71500CE": {
-   "Type": "AWS::ImageBuilder::ImagePipeline",
-   "Properties": {
-    "Description": "Image pipeline",
-    "ImageRecipeArn": {
+    "Handler": "framework.onEvent",
+    "Role": {
      "Fn::GetAtt": [
-      "ImagePipelineImageRecipeA26BB9F6",
+      "CustomResourceProviderframeworkonEventServiceRole7EBC5835",
       "Arn"
      ]
     },
-    "InfrastructureConfigurationArn": {
+    "Runtime": "nodejs18.x",
+    "Timeout": 900
+   },
+   "DependsOn": [
+    "CustomResourceProviderframeworkonEventServiceRoleDefaultPolicy93CD1647",
+    "CustomResourceProviderframeworkonEventServiceRole7EBC5835"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CustomResourceLambdaStack/CustomResourceProvider/framework-onEvent/Resource",
+    "aws:asset:path": "asset.7382a0addb9f34974a1ea6c6c9b063882af874828f366f5c93b2b7b64db15c94",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "CustomResource": {
+   "Type": "AWS::CloudFormation::CustomResource",
+   "Properties": {
+    "ServiceToken": {
      "Fn::GetAtt": [
-      "ImagePipelineInfrastructureConfigurationF13D357B",
+      "CustomResourceProviderframeworkonEvent0AA4376C",
       "Arn"
      ]
     },
-    "Name": "ImagePipeline-ImagePipeline"
+    "ParamSendToLambda": "Test Custom Input Param from custom resource lambda stack"
    },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/ImagePipeline/ImagePipeline"
+    "aws:cdk:path": "CustomResourceLambdaStack/CustomResource/Default"
    }
   },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/01PwW7CMAz9Fu4hW9kOu6JqQtWkKWoR1ylNXWZokipxQKjqvy9NB+X0np+f7ecNz7J3nq3k1a9Vc153WPOhIqnOLEo/A6gNHw69YnlrDiJnItQdqirUBmjSFlbaQLCXdQeLvmhb761CSWjNwzyRz0JM8C1pJwmu8saEw0uky+LCELjI74Y5yX+1pZj1V4MhVoEKDum2czb0KcOzMDJvPB/2tsf0TCIjQ6n5UNo59B0L40kaBcLZFjsY2VnH0S9ItyPEMS2PUAfsGnB8SCOtk55cUBQc5Na0eAzu8W8x+UtQ2KcDudW9NVPoe0/ETocGxpGV4G1wKhmFdFJD/D/Fe2rECw1O20dmbAP85F8u2QfP3vjr6uQR1y4YQg28nPEPwhMyaOgBAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02QQW/CMAyFfwv34K2ww65QbYjLVpWJK0pTjxnaBMUOCFX970tboJzel2cnfvEMkuQNkom+8NSUx2lFBTQb0eaoorVr0Myg2Z6MSn/tNktVFoqKzCYUFqXzRspdEPzRRYWjP3oLZmdICzn7aO7gY5118qVlpQUv+qoyT+eI48NrK+gj3xuGJLfTQmLWvxqtqA2a4EmuK+/Cqc/wbLSq0nVRamg+gzX3HHduFekamtwN6XvNXPxpP26gVvF8p5lRGBadxDMsgzmiLDVjq3JkF7xB1VfjEvdk98oEFlfv/K3IkHl3phK9SvvK41Y394m/g5xCv4DU2ZKGlNaVCAd+OSfvkMzhdXJgoqkPVqhGyAf9B5Vf2gvUAQAA"
    },
    "Metadata": {
-    "aws:cdk:path": "ImageBuilderTestStackSimple/CDKMetadata/Default"
+    "aws:cdk:path": "CustomResourceLambdaStack/CDKMetadata/Default"
    },
    "Condition": "CDKMetadataAvailable"
   }
  },
- "Parameters": {
-  "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
-   "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-   "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+ "Outputs": {
+  "CustomResourceOutput": {
+   "Value": {
+    "Fn::GetAtt": [
+     "CustomResource",
+     "TestMessage"
+    ]
+   }
   },
-  "BootstrapVersion": {
-   "Type": "AWS::SSM::Parameter::Value<String>",
-   "Default": "/cdk-bootstrap/tests/version",
-   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  "CustomResourceLambdaStackOutput": {
+   "Value": {
+    "Ref": "CustomResourceLambdaStack31DE7910"
+   }
+  },
+  "VpcId": {
+   "Value": {
+    "Ref": "Vpc8378EB38"
+   }
   }
  },
  "Conditions": {
@@ -881,6 +930,13 @@
      ]
     }
    ]
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/tests/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
   }
  },
  "Rules": {

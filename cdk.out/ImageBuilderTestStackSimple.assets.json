@@ -1,17 +1,16 @@
 {
   "version": "35.0.0",
   "files": {
-    "f27701db75c19bc4a8b9a33a014de267ea5a6dd412bc40b76b57663e877508dc": {
+    "ace7db52f1f3b744a82f8d4dae6d96e28bfbeee433ed9567b2ed9d3da1be0368": {
       "source": {
         "path": "ImageBuilderTestStackSimple.template.json",
         "packaging": "file"
       },
       "destinations": {
-        "265654035060-us-east-2": {
-          "bucketName": "cdk-tests-assets-265654035060-us-east-2",
-          "objectKey": "f27701db75c19bc4a8b9a33a014de267ea5a6dd412bc40b76b57663e877508dc.json",
-          "region": "us-east-2",
-          "assumeRoleArn": "arn:${AWS::Partition}:iam::265654035060:role/cdk-tests-file-publishing-role-265654035060-us-east-2"
+        "current_account-current_region": {
+          "bucketName": "cdk-tests-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "ace7db52f1f3b744a82f8d4dae6d96e28bfbeee433ed9567b2ed9d3da1be0368.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-tests-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
     }
