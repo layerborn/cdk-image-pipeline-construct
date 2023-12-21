@@ -1,9 +1,10 @@
 import { CdkCustomResourceEvent, CdkCustomResourceResponse, Context } from 'aws-lambda';
+import { CloudFormationResponse } from '../HelperFunctions/CloudFormationResponse';
 
-export const handler = async (
+export const handler = (
   event: CdkCustomResourceEvent,
   context: Context,
-): Promise<CdkCustomResourceResponse> => {
+): void => {
   console.log('Lambda is invoked with:' + JSON.stringify(event));
 
   const response: CdkCustomResourceResponse = {
@@ -16,20 +17,22 @@ export const handler = async (
   if (event.RequestType == 'Delete') {
     response.Status = 'SUCCESS';
     response.Data = { Result: 'None' };
-    return response;
+    new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId).send();
   }
 
   try {
     const multiplyResult = event.ResourceProperties.customResourceNumber * 2;
     response.Status = 'SUCCESS';
     response.Data = { Result: multiplyResult };
-    return response;
+    new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId).send();
   } catch (error) {
     if (error instanceof Error) {
       response.Reason = error.message;
     }
     response.Status = 'FAILED';
     response.Data = { Result: error };
-    return response;
+    new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId).send();
   }
 };
+
+

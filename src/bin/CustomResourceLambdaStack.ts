@@ -57,7 +57,7 @@ export class CustomResourceLambdaStack extends Stack {
     const result = new CustomResource(this, 'CustomResourceResult', {
       serviceToken: provider.serviceToken,
       properties: {
-        customResourceNumber: 5,
+        customResourceNumber: 7,
       },
     });
 
