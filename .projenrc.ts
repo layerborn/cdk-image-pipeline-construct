@@ -28,6 +28,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@aws-sdk/client-ec2',
     '@aws-sdk/client-sns',
     '@aws-sdk/client-ecs',
+    '@aws-sdk/client-s3',
     '@types/node@^18',
     '@types/js-yaml',
     'js-yaml',

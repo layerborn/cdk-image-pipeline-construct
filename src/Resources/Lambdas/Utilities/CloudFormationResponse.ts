@@ -12,6 +12,7 @@ export class CloudFormationResponse {
   responseData: any;
   physicalResourceId?: string;
   noEcho?: boolean;
+  responseBody: string;
 
   constructor(
     event: any,
@@ -27,10 +28,7 @@ export class CloudFormationResponse {
     this.responseData = responseData;
     this.physicalResourceId = physicalResourceId;
     this.noEcho = noEcho;
-  }
-
-  send(): void {
-    const responseBody: string = JSON.stringify({
+    this.responseBody = JSON.stringify({
       Status: this.responseStatus,
       Reason: 'See the details in CloudWatch Log Stream: ' + this.context.logStreamName,
       PhysicalResourceId: this.physicalResourceId || this.context.logStreamName,
@@ -40,9 +38,14 @@ export class CloudFormationResponse {
       NoEcho: this.noEcho || false,
       Data: this.responseData,
     });
+  }
 
-    console.log('Response body:\n', responseBody);
+  getResponseBody(): string {
+    return this.responseBody;
+  }
 
+  send(): void {
+    console.log('Response body:\n', this.responseBody);
     const parsedUrl: url.UrlWithStringQuery = url.parse(this.event.ResponseURL);
     const options: https.RequestOptions = {
       hostname: parsedUrl.hostname,
@@ -51,7 +54,7 @@ export class CloudFormationResponse {
       method: 'PUT',
       headers: {
         'content-type': '',
-        'content-length': responseBody.length,
+        'content-length': this.responseBody.length,
       },
     };
     const context = this.context;
@@ -65,7 +68,42 @@ export class CloudFormationResponse {
       context.done();
     });
 
-    request.write(responseBody);
+    request.write(this.responseBody);
     request.end();
   }
+
+  async sendAsync(): Promise<void> {
+    console.log('Response body:\n', this.responseBody);
+
+    const parsedUrl: url.UrlWithStringQuery = url.parse(this.event.ResponseURL);
+    const options: https.RequestOptions = {
+      hostname: parsedUrl.hostname,
+      port: 443,
+      path: parsedUrl.path,
+      method: 'PUT',
+      headers: {
+        'content-type': '',
+        'content-length': this.responseBody.length,
+      },
+    };
+
+    return new Promise((resolve, reject) => {
+      const request: ClientRequest = https.request(options, (response: IncomingMessage) => {
+        console.log('Status code: ' + response.statusCode);
+
+        response.on('end', () => {
+          resolve();
+        });
+      });
+
+      request.on('error', (error: Error) => {
+        console.log('send(..) failed executing https.request(..): ' + error);
+        reject(error);
+      });
+
+      request.write(this.responseBody);
+      request.end();
+    });
+  }
+
 }

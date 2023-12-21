@@ -1,6 +1,8 @@
 import { CfnOutput, CustomResource, Duration, Stack, StackProps } from 'aws-cdk-lib';
 import { IpAddresses, SubnetType, Vpc } from 'aws-cdk-lib/aws-ec2';
+import { Effect } from 'aws-cdk-lib/aws-iam';
 import { Provider } from 'aws-cdk-lib/custom-resources';
+import { PolicyStatement } from 'cdk-iam-floyd';
 import { Construct } from 'constructs';
 import { TestCustomResourceFunction } from '../Resources/Lambdas/TestCustomResourceLambda/TestCustomResource-function';
 
@@ -46,23 +48,32 @@ export class CustomResourceLambdaStack extends Stack {
         environment: {
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
         },
-
       });
 
+    customLambdaResource.addToRolePolicy(new PolicyStatement({
+      effect: Effect.ALLOW,
+      actions: ['s3:ListAllMyBuckets'],
+      resources: ['*'],
+    }));
 
     const provider = new Provider(this, 'CustomResourceProvider', {
       onEventHandler: customLambdaResource,
     });
 
+
     const result = new CustomResource(this, 'CustomResourceResult', {
       serviceToken: provider.serviceToken,
       properties: {
-        customResourceNumber: 7,
+        customResourceNumber: 8,
       },
     });
 
     new CfnOutput(this, 'CustomResourceResultOutput', {
       value: result.getAttString('Result'),
+    });
+
+    new CfnOutput(this, 'CustomResourceBucketsOutput', {
+      value: result.getAttString('Buckets'),
     });
 
     new CfnOutput(this, 'CustomResourceLambdaStackOutput', {
