@@ -40,9 +40,8 @@ export const handler = (
       Result: multiplyResult,
       Buckets: s3BucketCount.Buckets?.length,
     };
-    const cloudFormationResponse = new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId);
-    cloudFormationResponse.sendAsync().then(() => console.log('Response sent successfully'))
-      .catch(err => console.error('Error sending response:', err));
+    new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId).send();
+
   }).catch((error) => {
     if (error instanceof Error) {
       response.Reason = error.message;
@@ -52,9 +51,7 @@ export const handler = (
       Result: error,
       Buckets: 'Unknown',
     };
-    const cloudFormationResponse = new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId);
-    cloudFormationResponse.sendAsync().then(() => console.log('Response sent successfully'))
-      .catch(err => console.error('Error sending response:', err));
+    new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId).send();
   });
 };
 
