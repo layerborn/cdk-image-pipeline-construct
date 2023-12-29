@@ -1,18 +1,21 @@
-import { Stack, StackProps } from 'aws-cdk-lib';
+import { CfnOutput, Duration, Stack, StackProps } from 'aws-cdk-lib';
 import { AmazonLinuxEdition, AmazonLinuxGeneration, AmazonLinuxImage, IpAddresses, SubnetType, Vpc } from 'aws-cdk-lib/aws-ec2';
+import { StateMachine } from 'aws-cdk-lib/aws-stepfunctions';
 import { Construct } from 'constructs';
-import { ImagePipeline } from '../ImagePipeline';
+import { StartImagePipelineFunction } from '../lib/Resources/Lambdas/StartImagePipeline/StartImagePipeline-function';
+import { ImagePipeline } from '../src';
+import { STATE_MACHINE_ARN_ENV } from '../src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda';
 
-
-export interface ImageBuilderTestStackProps extends StackProps {
+export interface StateMachineLambdaStackProps extends StackProps {
   vpcCidr: string;
 }
 
-export class ImageBuilderTestStack extends Stack {
+export class StateMachineLambdaStack extends Stack {
+
   constructor(
     scope: Construct,
     id: string,
-    props: ImageBuilderTestStackProps,
+    props: StateMachineLambdaStackProps,
   ) {
     super(scope, id, props);
     const vpc = new Vpc(this, 'Vpc', {
@@ -32,16 +35,11 @@ export class ImageBuilderTestStack extends Stack {
       ],
       natGateways: 1,
     });
-
     const image = new AmazonLinuxImage({
       generation: AmazonLinuxGeneration.AMAZON_LINUX_2,
       edition: AmazonLinuxEdition.STANDARD,
     });
-
-
-    /// take a version from SSM and increment it during deployment
-
-    new ImagePipeline(this, 'ImagePipeline', {
+    const imagePipeline = new ImagePipeline(this, 'ImagePipeline', {
       parentImage: image.getImage(this).imageId,
       vpc: vpc,
       imageRecipeVersion: process.env.versionNumber,
@@ -73,6 +71,38 @@ export class ImageBuilderTestStack extends Stack {
         },
       ],
     });
+
+    const imagePipelineStateMachine = new StateMachine(this, 'ImagePipelineStateMachine', {
+      // state machine definition...
+    });
+
+    const startPipelineFunction = new StartImagePipelineFunction(this, 'StartImagePipelineFunction', {
+      memorySize: 128,
+      timeout: Duration.minutes(10),
+      vpc: vpc,
+      vpcSubnets: {
+        subnetType: SubnetType.PRIVATE_WITH_EGRESS,
+      },
+      environment: {
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
+        [STATE_MACHINE_ARN_ENV]: imagePipeline.imagePipelineArn,
+      },
+    });
+
+    imagePipelineStateMachine.grantStartExecution(startPipelineFunction);
+
+
+    new CfnOutput(this, 'ImagePipelineArn', {
+      value: imagePipeline.imagePipelineArn,
+    });
+
+    new CfnOutput(this, 'VpcId',
+      {
+        value: vpc.vpcId,
+        exportName: 'VpcId',
+      });
+
+
   }
 
   /// return an AMI ID that can be used to launch an instance of this image

@@ -1802,6 +1802,16 @@
   resolved "https://registry.yarnpkg.com/@layerborn/cdk-aspect-git-tagger/-/cdk-aspect-git-tagger-0.0.2.tgz#c45fd104734566b28108db5b162a1aa6706edd2a"
   integrity sha512-9AppoAH93gtJfRzB/VrLrV1X/miOV5/jV+DpuPvavSnvYB+diqjuhROsUbRMB5QGcU+KO4rqGd/Ai0SW8jWnpQ==
 
+"@matthewbonig/state-machine@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@matthewbonig/state-machine/-/state-machine-0.0.30.tgz#fc965714057219739a4da02df37dd664739ea676"
+  integrity sha512-P9FJU1GqhJsseATvE8zMS0XAIyHWSIbUXjLehE+AqVDcMpWNRnXcDxvUHKBa1dTzK4KhGWrCcKYRqJn6oGsLWA==
+  dependencies:
+    case "^1.6.3"
+    js-yaml "^4.1.0"
+    lodash.merge "^4.6.2"
+    projen "^0.71.34"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -5734,6 +5744,25 @@ process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
+
+projen@^0.71.34:
+  version "0.71.163"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.163.tgz#8522901b1b6f791567050fa43bc7248a86f0699d"
+  integrity sha512-Sj0UthyhhvHYAhgvuQtQk6R4ia/AkHGT/JG3PFbEjIIYcPSImonW+1OIrZ+S+ofWZJPWZj07RBYLiZ+qAVm8NQ==
+  dependencies:
+    "@iarna/toml" "^2.2.5"
+    case "^1.6.3"
+    chalk "^4.1.2"
+    comment-json "4.2.2"
+    conventional-changelog-config-spec "^2.1.0"
+    fast-json-patch "^3.1.1"
+    glob "^8"
+    ini "^2.0.0"
+    semver "^7.5.4"
+    shx "^0.3.4"
+    xmlbuilder2 "^3.1.1"
+    yaml "^2.2.2"
+    yargs "^17.7.2"
 
 projen@^0.77.5:
   version "0.77.5"

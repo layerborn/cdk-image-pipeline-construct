@@ -54,5 +54,6 @@ junit.xml
 tsconfig.json
 !/API.md
 /assets/
-!/src/Resources/Lambdas/ImageBuilderUpdateSsmLambda/ImageBuilderUpdateSsmLambda-function.ts
-!/src/Resources/Lambdas/TestCustomResourceLambda/TestCustomResource-function.ts
+!/src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm-function.ts
+!/src/Resources/Lambdas/StartImagePipeline/StartImagePipeline-function.ts
+!/src/Resources/Lambdas/TestCustomResource/TestCustomResource-function.ts

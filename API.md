@@ -85,6 +85,7 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.property.imagePipelineArn">imagePipelineArn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@layerborn/cdk-image-pipeline.ImagePipeline.property.imageRecipeComponents">imageRecipeComponents</a></code> | <code>aws-cdk-lib.aws_imagebuilder.CfnImageRecipe.ComponentConfigurationProperty[]</code> | *No description.* |
 
 ---
@@ -98,6 +99,16 @@ public readonly node: Node;
 - *Type:* constructs.Node
 
 The tree node.
+
+---
+
+##### `imagePipelineArn`<sup>Required</sup> <a name="imagePipelineArn" id="@layerborn/cdk-image-pipeline.ImagePipeline.property.imagePipelineArn"></a>
+
+```typescript
+public readonly imagePipelineArn: string;
+```
+
+- *Type:* string
 
 ---
 

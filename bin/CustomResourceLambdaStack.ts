@@ -4,7 +4,7 @@ import { Effect } from 'aws-cdk-lib/aws-iam';
 import { Provider } from 'aws-cdk-lib/custom-resources';
 import { PolicyStatement } from 'cdk-iam-floyd';
 import { Construct } from 'constructs';
-import { TestCustomResourceFunction } from '../Resources/Lambdas/TestCustomResourceLambda/TestCustomResource-function';
+import { TestCustomResourceFunction } from '../src/Resources/Lambdas/TestCustomResource/TestCustomResource-function';
 
 
 export interface CustomResourceLambdaStackProps extends StackProps {

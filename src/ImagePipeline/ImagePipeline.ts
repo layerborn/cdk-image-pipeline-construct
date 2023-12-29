@@ -5,6 +5,7 @@ import {
   aws_lambda as lambda,
   aws_sns as sns,
   aws_sns_subscriptions as subscriptions,
+  CfnOutput,
   RemovalPolicy,
 } from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
@@ -185,6 +186,7 @@ export interface ImagePipelineProps {
 
 export class ImagePipeline extends Construct {
   imageRecipeComponents: imagebuilder.CfnImageRecipe.ComponentConfigurationProperty[];
+  imagePipelineArn: string;
 
   constructor(scope: Construct, id: string, props: ImagePipelineProps) {
     super(scope, id);
@@ -395,6 +397,11 @@ export class ImagePipeline extends Construct {
       });
       amiSsmUpdateLambda.addEventSource(new SnsEventSource(topic, {}));
     }
-    new imagebuilder.CfnImagePipeline(this, 'ImagePipeline', imagePipelineProps);
+    const imageBuildPipeline = new imagebuilder.CfnImagePipeline(this, 'ImagePipeline', imagePipelineProps);
+    new CfnOutput(this, 'ImagePipelineArn', {
+      value: imageBuildPipeline.attrArn,
+    });
+
+    this.imagePipelineArn = imageBuildPipeline.attrArn;
   }
 }

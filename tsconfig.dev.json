@@ -31,6 +31,7 @@
     "test/**/*.ts",
     "src/**/*.ts",
     "test/**/*.ts",
+    "bin/**/*.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts"
   ],

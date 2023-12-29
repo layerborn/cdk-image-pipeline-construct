@@ -16,6 +16,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@layerborn/cdk-aspect-git-tagger',
     '@aws-cdk/aws-lambda-python-alpha@2.41.0-alpha.0',
     'aws-cdk-lib@^2.41.0',
+    '@matthewbonig/state-machine',
   ],
   devDeps: [
     'aws-cdk',
@@ -37,6 +38,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     include: [
       'src/**/*.ts',
       'test/**/*.ts',
+      'bin/**/*.ts',
     ],
     compilerOptions: {
       lib: ['es2019'],

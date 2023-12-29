@@ -1,10 +1,12 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { ListBucketsCommand, S3Client } from '@aws-sdk/client-s3';
 import { CdkCustomResourceEvent, CdkCustomResourceResponse, Context } from 'aws-lambda';
-import { CloudFormationResponse } from '../Utilities/CloudFormationResponse';
+import { CloudFormationResponse } from '../../Utilities/CloudFormationResponse';
 
-const s3Client = new S3Client({ region: 'us-east-2' }); // Replace with your region
+function sleep(minutes: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, minutes * 60000));
+}
 
+export const STATE_MACHINE_ARN_ENV = 'IMAGE_PIPELINE_ARN';
 
 export const handler = (
   event: CdkCustomResourceEvent,
@@ -30,29 +32,16 @@ export const handler = (
       .catch(error => console.error('Error sending response:', error));
   }
 
-
-  const multiplyResult = event.ResourceProperties.customResourceNumber * 2;
   response.Status = 'SUCCESS';
+  const cloudFormationResponse = new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId);
+  console.log('Sleeping for 10 minutes');
+  sleep(10).then(() => {
+    console.log('10 minutes have passed');
+    // start the step function here
+    cloudFormationResponse.send();
+  }).catch(error => console.error('Error sending response:', error));
 
-  s3Client.send(new ListBucketsCommand({})).then((s3BucketCount) => {
-    console.log(s3BucketCount.Buckets?.length);
-    response.Data = {
-      Result: multiplyResult,
-      Buckets: s3BucketCount.Buckets?.length,
-    };
-    new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId).send();
 
-  }).catch((error) => {
-    if (error instanceof Error) {
-      response.Reason = error.message;
-    }
-    response.Status = 'FAILED';
-    response.Data = {
-      Result: error,
-      Buckets: 'Unknown',
-    };
-    new CloudFormationResponse(event, context, response.Status, response.Data, response.PhysicalResourceId).send();
-  });
 };
 
 
