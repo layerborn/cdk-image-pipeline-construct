@@ -10,16 +10,16 @@ export interface TestCustomResourceFunctionProps extends lambda.FunctionOptions 
 }
 
 /**
- * An AWS Lambda function which executes src/Resources/Lambdas/TestCustomResource/TestCustomResource.
+ * An AWS Lambda function which executes src/Lambdas/TestCustomResource/TestCustomResource.
  */
 export class TestCustomResourceFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props?: TestCustomResourceFunctionProps) {
     super(scope, id, {
-      description: 'src/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda.ts',
+      description: 'src/Lambdas/TestCustomResource/TestCustomResource.lambda.ts',
       ...props,
       runtime: new lambda.Runtime('nodejs18.x', lambda.RuntimeFamily.NODEJS),
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../../../../assets/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda')),
+      code: lambda.Code.fromAsset(path.join(__dirname, '../../../assets/Lambdas/TestCustomResource/TestCustomResource.lambda')),
     });
     this.addEnvironment('AWS_NODEJS_CONNECTION_REUSE_ENABLED', '1', { removeInEdge: true });
   }

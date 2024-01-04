@@ -24,11 +24,13 @@
       "type": "build"
     },
     {
-      "name": "aws-cdk",
+      "name": "aws-cdk-lib",
+      "version": "2.85.0",
       "type": "build"
     },
     {
-      "name": "aws-cdk-lib",
+      "name": "aws-cdk",
+      "version": "2.85.0",
       "type": "build"
     },
     {
@@ -113,6 +115,14 @@
       "type": "bundled"
     },
     {
+      "name": "@aws-sdk/client-secrets-manager",
+      "type": "bundled"
+    },
+    {
+      "name": "@aws-sdk/client-sfn",
+      "type": "bundled"
+    },
+    {
       "name": "@aws-sdk/client-sns",
       "type": "bundled"
     },
@@ -135,18 +145,13 @@
     },
     {
       "name": "aws-cdk-lib",
-      "version": "^2.41.0",
+      "version": "^2.85.0",
       "type": "peer"
     },
     {
       "name": "constructs",
       "version": "^10.0.5",
       "type": "peer"
-    },
-    {
-      "name": "@aws-cdk/aws-lambda-python-alpha",
-      "version": "2.41.0-alpha.0",
-      "type": "runtime"
     },
     {
       "name": "@layerborn/cdk-aspect-git-tagger",
@@ -157,12 +162,22 @@
       "type": "runtime"
     },
     {
+      "name": "@types/node",
+      "version": "^18",
+      "type": "runtime"
+    },
+    {
       "name": "aws-cdk-lib",
-      "version": "^2.41.0",
+      "version": "2.85.0",
       "type": "runtime"
     },
     {
       "name": "cdk-iam-floyd",
+      "type": "runtime"
+    },
+    {
+      "name": "projen",
+      "version": "^0.77.5",
       "type": "runtime"
     }
   ],

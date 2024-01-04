@@ -148,9 +148,9 @@
         "devDependencies": [
           "**/test/**",
           "**/build-tools/**",
-          "src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts",
-          "src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts",
-          "src/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda.ts",
+          "src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts",
+          "src/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts",
+          "src/Lambdas/TestCustomResource/TestCustomResource.lambda.ts",
           ".projenrc.ts",
           "projenrc/**/*.ts"
         ],

@@ -1,18 +1,25 @@
 import { Stack, StackProps } from 'aws-cdk-lib';
 import { AmazonLinuxEdition, AmazonLinuxGeneration, AmazonLinuxImage, IpAddresses, SubnetType, Vpc } from 'aws-cdk-lib/aws-ec2';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as stepfunctions from 'aws-cdk-lib/aws-stepfunctions';
+import * as tasks from 'aws-cdk-lib/aws-stepfunctions-tasks';
 import { Construct } from 'constructs';
-import { ImagePipeline } from '../src';
+import { ImagePipeline } from '../ImagePipeline';
+
+if (stepfunctions || tasks || lambda) {
+}
 
 
-export interface ImageBuilderTestStackProps extends StackProps {
+export interface StateMachineLambdaStackProps extends StackProps {
   vpcCidr: string;
 }
 
-export class ImageBuilderTestStack extends Stack {
+export class StateMachineLambdaStack extends Stack {
+
   constructor(
     scope: Construct,
     id: string,
-    props: ImageBuilderTestStackProps,
+    props: StateMachineLambdaStackProps,
   ) {
     super(scope, id, props);
     const vpc = new Vpc(this, 'Vpc', {
@@ -32,14 +39,11 @@ export class ImageBuilderTestStack extends Stack {
       ],
       natGateways: 1,
     });
-
     const image = new AmazonLinuxImage({
       generation: AmazonLinuxGeneration.AMAZON_LINUX_2,
       edition: AmazonLinuxEdition.STANDARD,
     });
 
-
-    /// take a version from SSM and increment it during deployment
 
     new ImagePipeline(this, 'ImagePipeline', {
       parentImage: image.getImage(this).imageId,
@@ -73,6 +77,8 @@ export class ImageBuilderTestStack extends Stack {
         },
       ],
     });
+
+
   }
 
   /// return an AMI ID that can be used to launch an instance of this image

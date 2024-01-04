@@ -46,67 +46,67 @@
       "description": "Prepare assets",
       "steps": [
         {
-          "spawn": "bundle:Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda"
+          "spawn": "bundle:Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda"
         },
         {
-          "spawn": "bundle:Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda"
+          "spawn": "bundle:Lambdas/StartImagePipeline/StartImagePipeline.lambda"
         },
         {
-          "spawn": "bundle:Resources/Lambdas/TestCustomResource/TestCustomResource.lambda"
+          "spawn": "bundle:Lambdas/TestCustomResource/TestCustomResource.lambda"
         }
       ]
     },
-    "bundle:Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda": {
-      "name": "bundle:Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda",
-      "description": "Create a JavaScript bundle from src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts",
+    "bundle:Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda": {
+      "name": "bundle:Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda",
+      "description": "Create a JavaScript bundle from src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
+          "exec": "esbuild --bundle src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
         }
       ]
     },
-    "bundle:Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda:watch": {
-      "name": "bundle:Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda:watch",
-      "description": "Continuously update the JavaScript bundle from src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts",
+    "bundle:Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda:watch": {
+      "name": "bundle:Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda:watch",
+      "description": "Continuously update the JavaScript bundle from src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
+          "exec": "esbuild --bundle src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
         }
       ]
     },
-    "bundle:Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda": {
-      "name": "bundle:Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda",
-      "description": "Create a JavaScript bundle from src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts",
+    "bundle:Lambdas/StartImagePipeline/StartImagePipeline.lambda": {
+      "name": "bundle:Lambdas/StartImagePipeline/StartImagePipeline.lambda",
+      "description": "Create a JavaScript bundle from src/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
+          "exec": "esbuild --bundle src/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Lambdas/StartImagePipeline/StartImagePipeline.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
         }
       ]
     },
-    "bundle:Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda:watch": {
-      "name": "bundle:Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda:watch",
-      "description": "Continuously update the JavaScript bundle from src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts",
+    "bundle:Lambdas/StartImagePipeline/StartImagePipeline.lambda:watch": {
+      "name": "bundle:Lambdas/StartImagePipeline/StartImagePipeline.lambda:watch",
+      "description": "Continuously update the JavaScript bundle from src/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
+          "exec": "esbuild --bundle src/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Lambdas/StartImagePipeline/StartImagePipeline.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
         }
       ]
     },
-    "bundle:Resources/Lambdas/TestCustomResource/TestCustomResource.lambda": {
-      "name": "bundle:Resources/Lambdas/TestCustomResource/TestCustomResource.lambda",
-      "description": "Create a JavaScript bundle from src/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda.ts",
+    "bundle:Lambdas/TestCustomResource/TestCustomResource.lambda": {
+      "name": "bundle:Lambdas/TestCustomResource/TestCustomResource.lambda",
+      "description": "Create a JavaScript bundle from src/Lambdas/TestCustomResource/TestCustomResource.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
+          "exec": "esbuild --bundle src/Lambdas/TestCustomResource/TestCustomResource.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Lambdas/TestCustomResource/TestCustomResource.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
         }
       ]
     },
-    "bundle:Resources/Lambdas/TestCustomResource/TestCustomResource.lambda:watch": {
-      "name": "bundle:Resources/Lambdas/TestCustomResource/TestCustomResource.lambda:watch",
-      "description": "Continuously update the JavaScript bundle from src/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda.ts",
+    "bundle:Lambdas/TestCustomResource/TestCustomResource.lambda:watch": {
+      "name": "bundle:Lambdas/TestCustomResource/TestCustomResource.lambda:watch",
+      "description": "Continuously update the JavaScript bundle from src/Lambdas/TestCustomResource/TestCustomResource.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Resources/Lambdas/TestCustomResource/TestCustomResource.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
+          "exec": "esbuild --bundle src/Lambdas/TestCustomResource/TestCustomResource.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/Lambdas/TestCustomResource/TestCustomResource.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
         }
       ]
     },
@@ -336,13 +336,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/aws-lambda,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,aws-cdk,aws-cdk-lib,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest,jest-junit,jsii-diff,jsii-docgen,jsii-pacmak,projen,standard-version,ts-jest,ts-node,typescript,@aws-sdk/client-ec2,@aws-sdk/client-ecs,@aws-sdk/client-s3,@aws-sdk/client-sns,@aws-sdk/client-sqs,@types/js-yaml,js-yaml,constructs,@layerborn/cdk-aspect-git-tagger,@matthewbonig/state-machine,cdk-iam-floyd"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/aws-lambda,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,esbuild,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest,jest-junit,jsii-diff,jsii-docgen,jsii-pacmak,projen,standard-version,ts-jest,ts-node,typescript,@aws-sdk/client-ec2,@aws-sdk/client-ecs,@aws-sdk/client-s3,@aws-sdk/client-secrets-manager,@aws-sdk/client-sfn,@aws-sdk/client-sns,@aws-sdk/client-sqs,@types/js-yaml,js-yaml,aws-cdk-lib,constructs,@layerborn/cdk-aspect-git-tagger,@matthewbonig/state-machine,cdk-iam-floyd"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/aws-lambda @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk aws-cdk-lib esbuild eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit jsii-diff jsii-docgen jsii-pacmak projen standard-version ts-jest ts-node typescript @aws-sdk/client-ec2 @aws-sdk/client-ecs @aws-sdk/client-s3 @aws-sdk/client-sns @aws-sdk/client-sqs @types/js-yaml js-yaml constructs @layerborn/cdk-aspect-git-tagger @matthewbonig/state-machine cdk-iam-floyd"
+          "exec": "yarn upgrade @types/aws-lambda @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser esbuild eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit jsii-diff jsii-docgen jsii-pacmak projen standard-version ts-jest ts-node typescript @aws-sdk/client-ec2 @aws-sdk/client-ecs @aws-sdk/client-s3 @aws-sdk/client-secrets-manager @aws-sdk/client-sfn @aws-sdk/client-sns @aws-sdk/client-sqs @types/js-yaml js-yaml aws-cdk-lib constructs @layerborn/cdk-aspect-git-tagger @matthewbonig/state-machine cdk-iam-floyd"
         },
         {
           "exec": "npx projen"

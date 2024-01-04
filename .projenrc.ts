@@ -1,10 +1,13 @@
 import { awscdk } from 'projen';
 
+
+const projenDep = 'projen@^0.77.5';
+const cdkVersion = '2.85.0';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Jayson Rawlins',
   authorAddress: 'jayson.rawlins@layerborn.io',
   packageName: '@layerborn/cdk-image-pipeline',
-  cdkVersion: '2.41.0',
+  cdkVersion: cdkVersion,
   defaultReleaseBranch: 'main',
   license: 'Apache-2.0',
   jsiiVersion: '~5.0.0',
@@ -12,16 +15,18 @@ const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   repositoryUrl: 'https://github.com/layerborn/cdk-image-pipeline-construct.git',
   deps: [
+    projenDep,
     'cdk-iam-floyd',
     '@layerborn/cdk-aspect-git-tagger',
-    '@aws-cdk/aws-lambda-python-alpha@2.41.0-alpha.0',
-    'aws-cdk-lib@^2.41.0',
+    `aws-cdk-lib@${cdkVersion}`,
+    '@types/node@^18',
     '@matthewbonig/state-machine',
   ],
   devDeps: [
-    'aws-cdk',
-    'aws-cdk-lib',
+    `aws-cdk@${cdkVersion}`,
+    `aws-cdk-lib@${cdkVersion}`,
     '@types/aws-lambda',
+    '@types/node@^18',
   ],
 
   bundledDeps: [
@@ -30,6 +35,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@aws-sdk/client-sns',
     '@aws-sdk/client-ecs',
     '@aws-sdk/client-s3',
+    '@aws-sdk/client-secrets-manager',
+    '@aws-sdk/client-sfn',
     '@types/node@^18',
     '@types/js-yaml',
     'js-yaml',
@@ -38,7 +45,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     include: [
       'src/**/*.ts',
       'test/**/*.ts',
-      'bin/**/*.ts',
     ],
     compilerOptions: {
       lib: ['es2019'],
@@ -54,5 +60,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
 });
+
 
 project.synth();

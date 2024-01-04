@@ -10,16 +10,16 @@ export interface StartImagePipelineFunctionProps extends lambda.FunctionOptions 
 }
 
 /**
- * An AWS Lambda function which executes src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.
+ * An AWS Lambda function which executes src/Lambdas/StartImagePipeline/StartImagePipeline.
  */
 export class StartImagePipelineFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props?: StartImagePipelineFunctionProps) {
     super(scope, id, {
-      description: 'src/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts',
+      description: 'src/Lambdas/StartImagePipeline/StartImagePipeline.lambda.ts',
       ...props,
       runtime: new lambda.Runtime('nodejs18.x', lambda.RuntimeFamily.NODEJS),
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../../../../assets/Resources/Lambdas/StartImagePipeline/StartImagePipeline.lambda')),
+      code: lambda.Code.fromAsset(path.join(__dirname, '../../../assets/Lambdas/StartImagePipeline/StartImagePipeline.lambda')),
     });
     this.addEnvironment('AWS_NODEJS_CONNECTION_REUSE_ENABLED', '1', { removeInEdge: true });
   }

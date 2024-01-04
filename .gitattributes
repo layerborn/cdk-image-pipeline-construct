@@ -18,8 +18,8 @@
 /API.md linguist-generated
 /LICENSE linguist-generated
 /package.json linguist-generated
-/src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm-function.ts linguist-generated
-/src/Resources/Lambdas/StartImagePipeline/StartImagePipeline-function.ts linguist-generated
-/src/Resources/Lambdas/TestCustomResource/TestCustomResource-function.ts linguist-generated
+/src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm-function.ts linguist-generated
+/src/Lambdas/StartImagePipeline/StartImagePipeline-function.ts linguist-generated
+/src/Lambdas/TestCustomResource/TestCustomResource-function.ts linguist-generated
 /tsconfig.dev.json linguist-generated
 /yarn.lock linguist-generated

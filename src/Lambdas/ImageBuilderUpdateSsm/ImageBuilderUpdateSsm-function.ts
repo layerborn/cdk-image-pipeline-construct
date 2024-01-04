@@ -10,16 +10,16 @@ export interface ImageBuilderUpdateSsmFunctionProps extends lambda.FunctionOptio
 }
 
 /**
- * An AWS Lambda function which executes src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.
+ * An AWS Lambda function which executes src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.
  */
 export class ImageBuilderUpdateSsmFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props?: ImageBuilderUpdateSsmFunctionProps) {
     super(scope, id, {
-      description: 'src/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts',
+      description: 'src/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda.ts',
       ...props,
       runtime: new lambda.Runtime('nodejs18.x', lambda.RuntimeFamily.NODEJS),
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../../../../assets/Resources/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda')),
+      code: lambda.Code.fromAsset(path.join(__dirname, '../../../assets/Lambdas/ImageBuilderUpdateSsm/ImageBuilderUpdateSsm.lambda')),
     });
     this.addEnvironment('AWS_NODEJS_CONNECTION_REUSE_ENABLED', '1', { removeInEdge: true });
   }
